@@ -76,6 +76,9 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${playfair.variable} ${jakarta.variable} ${mulish.variable} scroll-smooth antialiased`}
     >
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/fsc1wsd.css" />
+      </head>
       <body className="min-h-screen bg-sand-50 font-sans text-ink-900 selection:bg-clay-500 selection:text-white">
         {children}
       </body>
