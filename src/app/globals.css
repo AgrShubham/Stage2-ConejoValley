@@ -1,7 +1,95 @@
+@import url("https://use.typekit.net/fsc1wsd.css");
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'PrintedMoments';
+  src: url('/fonts/printedmoments-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-script {
+  font-family: 'PrintedMoments', cursive, sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+  letter-spacing: 0em !important;
+  line-height: 0.8em !important;
+}
+
+.font-beaufort {
+  font-family: "beaufort-pro", Georgia, serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+}
+
+.font-beaufort-italic {
+  font-family: "beaufort-pro", Georgia, serif !important;
+  font-weight: 300 !important;
+  font-style: italic !important;
+}
+
+/* Authentic Conejo Valley Clone Button & Nav Link Styles */
+.sqs-btn-underline {
+  font-family: var(--font-mulish), 'Muli', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  color: #2B2B2B;
+  display: inline-block;
+  padding: 0.6rem 0;
+  position: relative;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.sqs-btn-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #515151;
+  transition: width 0.4s ease;
+}
+
+.sqs-btn-underline:hover::after {
+  width: 0;
+}
+
+.sqs-nav-link {
+  font-family: var(--font-mulish), 'Muli', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  color: #2B2B2B;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.sqs-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: #2B2B2B;
+  transition: width 0.3s ease;
+}
+
+.sqs-nav-link:hover::after {
+  width: 100%;
+}
+
+
 @theme {
-  --font-serif: var(--font-cormorant), "Cormorant Infant", Georgia, serif;
+  --font-serif: "beaufort-pro", var(--font-cormorant), Georgia, serif;
   --font-display: var(--font-playfair), Georgia, serif;
   --font-sans: var(--font-jakarta), var(--font-mulish), system-ui, sans-serif;
   --font-mulish: var(--font-mulish), system-ui, sans-serif;

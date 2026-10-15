@@ -6,51 +6,60 @@ export function HeroClone() {
   const { topBadge, hero } = conejoValleyCloneData;
 
   return (
-    <section className="bg-[#FAF9F6] pt-12 pb-20 lg:pt-20 lg:pb-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Left Column: Typography & CTA */}
-          <div className="lg:col-span-7">
-            {/* Top Eyebrow */}
-            <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#666A65] mb-6">
+    <section className="bg-[#F7F6F2] pt-6 pb-16 lg:pt-10 lg:pb-20 overflow-hidden">
+      <div className="w-full max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-24 items-center gap-y-10 lg:gap-x-6">
+          {/* Column 1: Left Main Hero Image (Spans Columns 1 to 9 on desktop) */}
+          <div className="lg:col-span-9 flex justify-start">
+            <div className="relative aspect-[4/5] w-full max-w-md lg:max-w-none overflow-hidden">
+              <Image
+                src={hero.imageLeft}
+                alt="Online and in-person counseling in Newbury Park"
+                fill
+                sizes="(max-width: 1024px) 100vw, 38vw"
+                className="object-cover object-center"
+                priority
+              />
+            </div>
+          </div>
+
+          {/* Column 2: Center Headline & Content (Spans Columns 10 to 22 on desktop) */}
+          <div className="lg:col-span-12 flex flex-col justify-center px-2 lg:pl-6 text-left">
+            <p className="text-[11px] sm:text-xs font-normal tracking-[0.14em] uppercase text-[#2B2B2B] mb-5">
               {topBadge}
             </p>
 
-            {/* Main H1 Headline */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.18] text-[#2B2E2A] tracking-tight">
-              Rebuild your foundation on solid ground and finally begin to{" "}
-              <span className="italic font-semibold text-[#2C423B]">
-                thrive
+            <h1 className="font-beaufort text-3xl sm:text-4xl lg:text-[50px] font-light leading-[1.14] text-[#2B2B2B] tracking-normal">
+              {hero.headingPart1}{" "}
+              <span className="font-script text-[#88B1B1] text-[1.35em] inline-block font-normal ml-1">
+                {hero.scriptWord}
               </span>
-              .
+              {hero.headingPart2}
             </h1>
 
-            {/* Subheading */}
-            <p className="mt-8 text-base sm:text-lg text-[#555853] font-light leading-relaxed max-w-xl">
+            <p className="mt-5 text-sm sm:text-base text-[#2B2B2B] font-light leading-relaxed max-w-lg">
               {hero.subheading}
             </p>
 
-            {/* CTA Button */}
-            <div className="mt-10">
+            <div className="mt-8">
               <Link
-                href="#schedule"
-                className="inline-block rounded-full bg-[#2B2E2A] px-8 py-3.5 text-xs font-semibold tracking-wider text-white uppercase transition-all duration-300 hover:bg-[#C08D5D] hover:shadow-md"
+                href="/clone#contact"
+                className="sqs-btn-underline"
               >
                 {hero.ctaText}
               </Link>
             </div>
           </div>
 
-          {/* Right Column: Hero Visual */}
-          <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-xl">
+          {/* Column 3: Right Sliced Visual (Spans Columns 23 to 24 on desktop) */}
+          <div className="hidden lg:block lg:col-span-3">
+            <div className="relative aspect-[1/3] w-full overflow-hidden">
               <Image
-                src={hero.image}
-                alt="Conejo Valley Family Counseling"
+                src={hero.imageRight}
+                alt="Specialized counseling in California"
                 fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-center"
-                priority
+                sizes="12vw"
+                className="object-cover object-left"
               />
             </div>
           </div>

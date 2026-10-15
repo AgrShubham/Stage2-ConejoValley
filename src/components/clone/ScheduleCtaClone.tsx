@@ -6,47 +6,59 @@ export function ScheduleCtaClone() {
   const { bookingCta } = conejoValleyCloneData;
 
   return (
-    <section id="schedule" className="bg-white py-20 lg:py-28 border-t border-[#E8E7E3]">
-      <div className="mx-auto max-w-7xl px-6 lg:px-12">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Content */}
-          <div className="lg:col-span-7">
-            <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#666A65] mb-4">
+    <section id="schedule" className="bg-[#F7F6F2] py-20 lg:py-28 overflow-hidden">
+      <div className="mx-auto max-w-[1500px] px-6 md:px-10 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          {/* Left Visual: Seashells 1 - sharp rectangular */}
+          <div className="hidden lg:block lg:col-span-3">
+            <div className="relative aspect-[3/4] w-full overflow-hidden">
+              <Image
+                src={bookingCta.imageLeft}
+                alt="Person picking up seashells on a sandy beach"
+                fill
+                sizes="25vw"
+                className="object-cover object-center"
+              />
+            </div>
+          </div>
+
+          {/* Center Column: Text & Booking Action */}
+          <div className="lg:col-span-6 text-left lg:text-center px-0 lg:px-6">
+            <p className="text-[11px] sm:text-xs font-normal tracking-[0.14em] uppercase text-[#2B2B2B] mb-4">
               {bookingCta.tagline}
             </p>
 
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight text-[#2B2E2A]">
-              Find a therapist who is the right fit for{" "}
-              <span className="italic font-semibold text-[#2C423B]">you</span>.
+            <h2 className="font-beaufort text-3xl sm:text-4xl lg:text-[46px] font-light leading-tight text-[#2B2B2B]">
+              {bookingCta.headingPart1}{" "}
+              <span className="font-script text-[#88B1B1] text-[1.35em] inline-block font-normal ml-1">
+                {bookingCta.scriptWord}
+              </span>
+              {bookingCta.headingPart2}
             </h2>
 
-            <div className="mt-6 space-y-4 text-base text-[#555853] font-light leading-relaxed">
-              <p>
-                Coming to therapy is a courageous decision, and connecting with the right kind of therapist makes all the difference. We understand that your journey is personal, and we&apos;re here to support you with care and understanding every step of the way. Each member of our team brings dedicated expertise and a commitment to support you in your struggles. We want you to feel prioritized, understood, and empowered.
-              </p>
-              <p className="font-normal text-[#2B2E2A]">
-                Click the button below to schedule an appointment.
-              </p>
+            <div className="mt-6 space-y-4 text-sm sm:text-base text-[#2B2B2B] font-light leading-relaxed max-w-xl mx-auto">
+              <p>{bookingCta.body1}</p>
+              <p className="text-[#2B2B2B] font-light">{bookingCta.body2}</p>
             </div>
 
             <div className="mt-8">
               <Link
-                href="/clone"
-                className="inline-block rounded-full bg-[#2B2E2A] px-8 py-3.5 text-xs font-semibold tracking-wider text-white uppercase transition-all duration-300 hover:bg-[#C08D5D]"
+                href="/clone#contact"
+                className="sqs-btn-underline"
               >
                 {bookingCta.ctaText}
               </Link>
             </div>
           </div>
 
-          {/* Visual */}
-          <div className="lg:col-span-5">
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-xl">
+          {/* Right Visual: Seashells 2 - sharp rectangular */}
+          <div className="lg:col-span-3 flex justify-center">
+            <div className="relative aspect-[3/4] w-full max-w-xs lg:max-w-none overflow-hidden">
               <Image
-                src={bookingCta.image}
-                alt="Conejo Valley Counseling beach landscape"
+                src={bookingCta.imageRight}
+                alt="Person in striped dress pointing at shells on beach with child"
                 fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
+                sizes="(max-width: 1024px) 100vw, 25vw"
                 className="object-cover object-center"
               />
             </div>

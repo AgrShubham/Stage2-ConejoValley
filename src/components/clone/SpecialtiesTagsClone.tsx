@@ -1,25 +1,67 @@
+import Link from "next/link";
 import { conejoValleyCloneData } from "@/data/cloneData";
 
 export function SpecialtiesTagsClone() {
-  const { expertiseTags } = conejoValleyCloneData;
+  const { expertise } = conejoValleyCloneData;
 
   return (
-    <section className="bg-white py-16 lg:py-20 border-b border-[#E8E7E3]">
-      <div className="mx-auto max-w-5xl px-6 lg:px-12 text-center">
-        <h3 className="font-serif text-2xl sm:text-3xl text-[#2B2E2A] mb-8 font-normal">
-          Our areas of{" "}
-          <span className="italic font-semibold text-[#2C423B]">expertise</span>
-        </h3>
+    <section className="bg-white py-20 lg:py-28 border-b border-[#E8E7E3]">
+      <div className="mx-auto max-w-[1500px] px-6 md:px-10 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          {/* Left Column: Heading */}
+          <div className="lg:col-span-5">
+            <h3 className="font-beaufort text-3xl sm:text-4xl lg:text-[44px] font-light text-[#2B2B2B] leading-tight sticky top-28">
+              {expertise.heading}{" "}
+              <span className="font-script text-[#88B1B1] text-[1.35em] inline-block font-normal ml-1">
+                {expertise.scriptWord}
+              </span>
+            </h3>
+          </div>
 
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-4xl mx-auto">
-          {expertiseTags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full border border-[#D5D3CC] bg-[#FAF9F6] px-5 py-2 text-xs sm:text-[13px] font-medium tracking-wide text-[#555853] hover:border-[#C08D5D] hover:text-[#2B2E2A] transition-colors"
-            >
-              {tag}
-            </span>
-          ))}
+          {/* Right Column: 2-Subcolumn Editorial Bordered List */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-12">
+            {/* Column A */}
+            <div>
+              {expertise.columnA.map((item) => (
+                <div
+                  key={item.label}
+                  className="border-b border-[#E8E7E3] py-4 text-xs tracking-[0.12em] uppercase text-[#2B2B2B] transition-colors"
+                >
+                  {item.href ? (
+                    <Link
+                      href="/clone"
+                      className="hover:text-[#88B1B1] transition-colors font-normal flex items-center justify-between"
+                    >
+                      <span>{item.label}</span>
+                    </Link>
+                  ) : (
+                    <span className="font-normal text-[#2B2B2B]">{item.label}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Column B */}
+            <div>
+              {expertise.columnB.map((item) => (
+                <div
+                  key={item.label}
+                  className="border-b border-[#E8E7E3] py-4 text-xs tracking-[0.12em] uppercase text-[#2B2B2B] transition-colors"
+                >
+                  {item.href ? (
+                    <Link
+                      href="/clone"
+                      className="hover:text-[#88B1B1] transition-colors font-normal flex items-center justify-between"
+                    >
+                      <span>{item.label}</span>
+                    </Link>
+                  ) : (
+                    <span className="font-normal text-[#2B2B2B]">{item.label}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

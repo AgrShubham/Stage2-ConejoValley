@@ -40,23 +40,23 @@ export function NavbarClone() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#FAF9F6] border-b border-[#E8E7E3]/60 transition-colors">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
+    <header className="sticky top-0 z-50 w-full bg-[#F7F6F2] border-b border-[#E8E7E3]/60 transition-colors">
+      <div className="mx-auto flex max-w-[1500px] items-center justify-between px-6 py-4 lg:px-12">
         {/* Brand Logo */}
         <Link href="/clone" className="relative flex items-center">
           <Image
             src="/images/clone/logo.png"
             alt="Conejo Valley Family Counseling"
-            width={240}
-            height={60}
+            width={260}
+            height={65}
             className="h-10 w-auto object-contain md:h-12"
             priority
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-7 lg:flex text-[14px] text-[#2B2E2A] font-normal tracking-wide">
-          <Link href="/clone" className="hover:text-[#C08D5D] transition-colors">
+        <nav className="hidden items-center gap-8 lg:flex">
+          <Link href="/clone" className="sqs-nav-link">
             About
           </Link>
 
@@ -66,17 +66,17 @@ export function NavbarClone() {
             onMouseEnter={() => setActiveDropdown("team")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="flex items-center gap-1 hover:text-[#C08D5D] transition-colors py-2 cursor-pointer">
+            <button className="sqs-nav-link gap-1 py-2 cursor-pointer">
               <span>Our Team</span>
-              <ChevronDown className="h-3.5 w-3.5 opacity-60" />
+              <ChevronDown className="h-3 w-3 opacity-60 ml-0.5" />
             </button>
             {activeDropdown === "team" && (
-              <div className="absolute top-full left-0 w-64 rounded-md border border-[#E8E7E3] bg-[#FAF9F6] p-3 shadow-lg">
+              <div className="absolute top-full left-0 w-72 border border-[#E8E7E3] bg-[#F7F6F2] py-2 shadow-sm">
                 {teamList.map((member) => (
                   <Link
                     key={member}
                     href="/clone"
-                    className="block px-3 py-1.5 text-[13px] text-[#555853] hover:bg-[#F2EFEA] hover:text-[#2B2E2A] rounded transition-colors"
+                    className="block px-4 py-2 text-xs font-normal tracking-wider uppercase text-[#2B2B2B] hover:bg-[#EDEBE5] transition-colors"
                   >
                     {member}
                   </Link>
@@ -91,17 +91,17 @@ export function NavbarClone() {
             onMouseEnter={() => setActiveDropdown("specialties")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="flex items-center gap-1 hover:text-[#C08D5D] transition-colors py-2 cursor-pointer">
+            <button className="sqs-nav-link gap-1 py-2 cursor-pointer">
               <span>Specialties</span>
-              <ChevronDown className="h-3.5 w-3.5 opacity-60" />
+              <ChevronDown className="h-3 w-3 opacity-60 ml-0.5" />
             </button>
             {activeDropdown === "specialties" && (
-              <div className="absolute top-full left-0 w-56 rounded-md border border-[#E8E7E3] bg-[#FAF9F6] p-3 shadow-lg">
+              <div className="absolute top-full left-0 w-64 border border-[#E8E7E3] bg-[#F7F6F2] py-2 shadow-sm">
                 {specialtiesList.map((spec) => (
                   <Link
                     key={spec}
                     href="/clone"
-                    className="block px-3 py-1.5 text-[13px] text-[#555853] hover:bg-[#F2EFEA] hover:text-[#2B2E2A] rounded transition-colors"
+                    className="block px-4 py-2 text-xs font-normal tracking-wider uppercase text-[#2B2B2B] hover:bg-[#EDEBE5] transition-colors"
                   >
                     {spec}
                   </Link>
@@ -116,17 +116,17 @@ export function NavbarClone() {
             onMouseEnter={() => setActiveDropdown("methods")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="flex items-center gap-1 hover:text-[#C08D5D] transition-colors py-2 cursor-pointer">
+            <button className="sqs-nav-link gap-1 py-2 cursor-pointer">
               <span>Methods</span>
-              <ChevronDown className="h-3.5 w-3.5 opacity-60" />
+              <ChevronDown className="h-3 w-3 opacity-60 ml-0.5" />
             </button>
             {activeDropdown === "methods" && (
-              <div className="absolute top-full left-0 w-52 rounded-md border border-[#E8E7E3] bg-[#FAF9F6] p-3 shadow-lg">
+              <div className="absolute top-full left-0 w-56 border border-[#E8E7E3] bg-[#F7F6F2] py-2 shadow-sm">
                 {methodsList.map((method) => (
                   <Link
                     key={method}
                     href="/clone"
-                    className="block px-3 py-1.5 text-[13px] text-[#555853] hover:bg-[#F2EFEA] hover:text-[#2B2E2A] rounded transition-colors"
+                    className="block px-4 py-2 text-xs font-normal tracking-wider uppercase text-[#2B2B2B] hover:bg-[#EDEBE5] transition-colors"
                   >
                     {method}
                   </Link>
@@ -135,14 +135,14 @@ export function NavbarClone() {
             )}
           </div>
 
-          <Link href="/clone" className="hover:text-[#C08D5D] transition-colors">
+          <Link href="/clone" className="sqs-nav-link">
             FAQs
           </Link>
 
           {/* Contact Button */}
           <Link
-            href="/clone"
-            className="rounded-full border border-[#2B2E2A] px-5 py-2 text-xs font-semibold tracking-wider text-[#2B2E2A] transition-all hover:bg-[#2B2E2A] hover:text-white"
+            href="/clone#contact"
+            className="border border-[#2B2B2B] px-5 py-2 uppercase text-[11px] tracking-[0.14em] font-normal text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white transition-colors duration-200"
           >
             Contact
           </Link>
@@ -151,26 +151,26 @@ export function NavbarClone() {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex p-2 text-[#2B2E2A] lg:hidden cursor-pointer"
-          aria-label="Toggle Navigation Menu"
+          className="lg:hidden p-2 text-[#2B2B2B] focus:outline-none"
+          aria-label="Toggle navigation menu"
         >
           {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
-        <div className="border-t border-[#E8E7E3] bg-[#FAF9F6] px-6 py-6 lg:hidden animate-in slide-in-from-top-4 duration-200">
-          <div className="flex flex-col space-y-4 text-base text-[#2B2E2A]">
+        <div className="lg:hidden border-t border-[#E8E7E3] bg-[#F7F6F2] px-6 py-8 shadow-xl">
+          <div className="flex flex-col gap-5">
             <Link
               href="/clone"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1 hover:text-[#C08D5D]"
+              className="text-sm font-normal tracking-[0.12em] uppercase text-[#2B2B2B]"
             >
               About
             </Link>
 
-            {/* Folder: Our Team */}
+            {/* Mobile Team Folder */}
             <div>
               <button
                 onClick={() =>
@@ -178,7 +178,7 @@ export function NavbarClone() {
                     expandedMobileFolder === "team" ? null : "team"
                   )
                 }
-                className="flex w-full items-center justify-between py-1 text-left hover:text-[#C08D5D]"
+                className="flex w-full items-center justify-between text-sm font-normal tracking-[0.12em] uppercase text-[#2B2B2B]"
               >
                 <span>Our Team</span>
                 <ChevronDown
@@ -188,22 +188,22 @@ export function NavbarClone() {
                 />
               </button>
               {expandedMobileFolder === "team" && (
-                <div className="pl-4 pt-2 space-y-2 border-l border-[#E8E7E3] ml-2">
-                  {teamList.map((m) => (
+                <div className="mt-3 flex flex-col gap-2 pl-4 border-l border-[#2B2B2B]/20">
+                  {teamList.map((member) => (
                     <Link
-                      key={m}
+                      key={member}
                       href="/clone"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block text-sm text-[#666A65] py-1 hover:text-[#2B2E2A]"
+                      className="text-xs uppercase tracking-wider text-[#555853] py-1"
                     >
-                      {m}
+                      {member}
                     </Link>
                   ))}
                 </div>
               )}
             </div>
 
-            {/* Folder: Specialties */}
+            {/* Mobile Specialties Folder */}
             <div>
               <button
                 onClick={() =>
@@ -211,7 +211,7 @@ export function NavbarClone() {
                     expandedMobileFolder === "specialties" ? null : "specialties"
                   )
                 }
-                className="flex w-full items-center justify-between py-1 text-left hover:text-[#C08D5D]"
+                className="flex w-full items-center justify-between text-sm font-normal tracking-[0.12em] uppercase text-[#2B2B2B]"
               >
                 <span>Specialties</span>
                 <ChevronDown
@@ -221,22 +221,22 @@ export function NavbarClone() {
                 />
               </button>
               {expandedMobileFolder === "specialties" && (
-                <div className="pl-4 pt-2 space-y-2 border-l border-[#E8E7E3] ml-2">
-                  {specialtiesList.map((s) => (
+                <div className="mt-3 flex flex-col gap-2 pl-4 border-l border-[#2B2B2B]/20">
+                  {specialtiesList.map((spec) => (
                     <Link
-                      key={s}
+                      key={spec}
                       href="/clone"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block text-sm text-[#666A65] py-1 hover:text-[#2B2E2A]"
+                      className="text-xs uppercase tracking-wider text-[#555853] py-1"
                     >
-                      {s}
+                      {spec}
                     </Link>
                   ))}
                 </div>
               )}
             </div>
 
-            {/* Folder: Methods */}
+            {/* Mobile Methods Folder */}
             <div>
               <button
                 onClick={() =>
@@ -244,7 +244,7 @@ export function NavbarClone() {
                     expandedMobileFolder === "methods" ? null : "methods"
                   )
                 }
-                className="flex w-full items-center justify-between py-1 text-left hover:text-[#C08D5D]"
+                className="flex w-full items-center justify-between text-sm font-normal tracking-[0.12em] uppercase text-[#2B2B2B]"
               >
                 <span>Methods</span>
                 <ChevronDown
@@ -254,15 +254,15 @@ export function NavbarClone() {
                 />
               </button>
               {expandedMobileFolder === "methods" && (
-                <div className="pl-4 pt-2 space-y-2 border-l border-[#E8E7E3] ml-2">
-                  {methodsList.map((m) => (
+                <div className="mt-3 flex flex-col gap-2 pl-4 border-l border-[#2B2B2B]/20">
+                  {methodsList.map((method) => (
                     <Link
-                      key={m}
+                      key={method}
                       href="/clone"
                       onClick={() => setMobileMenuOpen(false)}
-                      className="block text-sm text-[#666A65] py-1 hover:text-[#2B2E2A]"
+                      className="text-xs uppercase tracking-wider text-[#555853] py-1"
                     >
-                      {m}
+                      {method}
                     </Link>
                   ))}
                 </div>
@@ -272,15 +272,15 @@ export function NavbarClone() {
             <Link
               href="/clone"
               onClick={() => setMobileMenuOpen(false)}
-              className="py-1 hover:text-[#C08D5D]"
+              className="text-sm font-normal tracking-[0.12em] uppercase text-[#2B2B2B]"
             >
               FAQs
             </Link>
 
             <Link
-              href="/clone"
+              href="/clone#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 inline-block text-center rounded-full border border-[#2B2E2A] px-6 py-2.5 text-xs font-semibold tracking-wider text-[#2B2E2A] hover:bg-[#2B2E2A] hover:text-white"
+              className="mt-2 inline-block text-center border border-[#2B2B2B] py-2.5 uppercase text-xs tracking-[0.14em] font-normal text-[#2B2B2B]"
             >
               Contact
             </Link>
