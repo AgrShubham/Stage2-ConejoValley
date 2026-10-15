@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-cormorant), "Cormorant Infant", Georgia, serif;
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-jakarta), var(--font-mulish), system-ui, sans-serif;
+  --font-mulish: var(--font-mulish), system-ui, sans-serif;
+
+  /* Redesign Brand Palette (Dr. Maya Reynolds) */
+  --color-sand-50: #FAF8F5;
+  --color-sand-100: #F3EFE6;
+  --color-sand-200: #E6DFD3;
+  --color-sand-300: #D8CEBE;
+
+  --color-forest-900: #1F3025;
+  --color-forest-800: #294032;
+  --color-forest-700: #365241;
+  --color-forest-600: #466753;
+
+  --color-clay-600: #AA573B;
+  --color-clay-500: #C1684B;
+  --color-clay-400: #D67F63;
+  --color-clay-100: #F7ECE7;
+  --color-clay-50: #FCF7F5;
+
+  --color-sage-600: #6D8775;
+  --color-sage-500: #8EA695;
+  --color-sage-200: #CBD7CE;
+  --color-sage-100: #E8EFEA;
+  --color-sage-50: #F4F8F5;
+
+  --color-ink-950: #141C16;
+  --color-ink-900: #1C2620;
+  --color-ink-700: #3E4D43;
+  --color-ink-500: #63756A;
+  --color-ink-400: #8E9E95;
+  --color-ink-200: #D1D9D4;
+
+  /* Conejo Valley Clone Colors */
+  --color-cv-bg: #FFFFFF;
+  --color-cv-cream: #FAF9F6;
+  --color-cv-dark: #2B2E2A;
+  --color-cv-dark-accent: #2C423B;
+  --color-cv-gold: #C08D5D;
+  --color-cv-muted: #666A65;
+  --color-cv-border: #E8E7E3;
+}
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #1C2620;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #C1684B;
+  color: #FFFFFF;
+}
+
+/* Custom scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD7CE;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8EA695;
+}
+
