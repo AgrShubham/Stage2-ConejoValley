@@ -154,7 +154,7 @@ export const conejoValleyCloneData: CloneData = {
       { label: "CHILDREN", href: "/children-and-teens" },
       { label: "TEENS", href: "/children-and-teens" },
       { label: "INTIMACY & CONNECTION", href: "/couples-therapy" },
-      { label: ".AND MORE." },
+      { label: "…AND MORE." },
     ],
   },
   howWeWork: {

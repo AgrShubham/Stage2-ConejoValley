@@ -1,6 +1,22 @@
 @import "tailwindcss";
 
 @font-face {
+  font-family: 'beaufort-pro';
+  src: url('/fonts/beaufort-pro-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'beaufort-pro';
+  src: url('/fonts/beaufort-pro-300-italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'PrintedMoments';
   src: url('/fonts/printedmoments-webfont.woff') format('woff');
   font-weight: 300;
@@ -12,20 +28,90 @@
   font-family: 'PrintedMoments', cursive, sans-serif !important;
   font-weight: 300 !important;
   font-style: normal !important;
+  font-size: 1.15em !important;
   letter-spacing: 0em !important;
-  line-height: 0.8em !important;
+  line-height: 0.7em !important;
 }
 
 .font-beaufort {
-  font-family: "beaufort-pro", Georgia, serif !important;
+  font-family: "beaufort-pro", var(--font-cormorant), Georgia, serif !important;
   font-weight: 300 !important;
   font-style: normal !important;
 }
 
 .font-beaufort-italic {
+  font-family: "beaufort-pro", var(--font-cormorant), Georgia, serif !important;
+  font-weight: 300 !important;
+  font-style: italic !important;
+}
+
+.font-muli {
+  font-family: var(--font-mulish), 'Muli', system-ui, sans-serif !important;
+}
+
+/* Scoped typography for the Conejo Valley 1:1 clone page */
+.clone-page {
+  font-family: var(--font-mulish), 'Muli', system-ui, sans-serif;
+  color: #2B2B2B;
+  line-height: 1.8;
+  background-color: #F7F6F2;
+}
+
+.clone-page h1,
+.clone-page h2,
+.clone-page h3,
+.clone-page h4 {
+  font-family: "beaufort-pro", Georgia, serif !important;
+  font-weight: 300 !important;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #2B2B2B;
+}
+
+.clone-page h1 em,
+.clone-page h2 em,
+.clone-page h3 em,
+.clone-page h4 em {
   font-family: "beaufort-pro", Georgia, serif !important;
   font-weight: 300 !important;
   font-style: italic !important;
+}
+
+.clone-page .script-word,
+.clone-page h1 strong em,
+.clone-page h2 strong em,
+.clone-page h3 strong em,
+.clone-page h4 strong em {
+  font-family: 'PrintedMoments', cursive, sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+  color: #88B1B1 !important;
+  font-size: 1.15em !important;
+  letter-spacing: 0em !important;
+  line-height: 0.7em !important;
+  display: inline-block;
+}
+
+.clone-page .clone-eyebrow {
+  font-family: var(--font-mulish), 'Muli', sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  line-height: 1.4 !important;
+  color: #2B2B2B;
+}
+
+.clone-page .clone-lead-caps {
+  font-family: var(--font-mulish), 'Muli', sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  line-height: 1.6 !important;
+  color: #2B2B2B;
+  margin-bottom: 0.75rem;
+  display: block;
 }
 
 /* Authentic Conejo Valley Clone Button & Nav Link Styles */
@@ -37,26 +123,46 @@
   line-height: 1.2;
   color: #2B2B2B;
   display: inline-block;
-  padding: 0.6rem 0;
+  padding: 0.5rem 0;
   position: relative;
   text-decoration: none;
   font-weight: 400;
-  transition: all 0.3s ease;
+  transform: perspective(1px) translateZ(0);
 }
 
-.sqs-btn-underline::after {
+.sqs-btn-underline::before {
   content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
-  height: 1px;
-  background-color: #515151;
-  transition: width 0.4s ease;
+  left: 0;
+  border-bottom: 1px solid #515151;
+  transition: right 0.5s ease;
 }
 
-.sqs-btn-underline:hover::after {
-  width: 0;
+.sqs-btn-underline:hover::before {
+  right: 100%;
+}
+
+.sqs-btn-secondary {
+  font-family: var(--font-mulish), 'Muli', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.85rem;
+  border: 1px solid #2B2B2B;
+  background-color: transparent;
+  color: #2B2B2B;
+  display: inline-block;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.sqs-btn-secondary:hover {
+  background-color: #2B2B2B;
+  color: #FFFFFF;
 }
 
 .sqs-nav-link {

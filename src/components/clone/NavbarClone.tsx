@@ -76,7 +76,7 @@ export function NavbarClone() {
                   <Link
                     key={member}
                     href="/clone"
-                    className="block px-4 py-2 text-xs font-normal tracking-wider uppercase text-[#2B2B2B] hover:bg-[#EDEBE5] transition-colors"
+                    className="block px-4 py-2 text-xs font-normal tracking-wider uppercase text-[#2B2B2B] border-b border-transparent hover:border-[#2B2B2B] transition-colors"
                   >
                     {member}
                   </Link>
@@ -101,7 +101,7 @@ export function NavbarClone() {
                   <Link
                     key={spec}
                     href="/clone"
-                    className="block px-4 py-2 text-xs font-normal tracking-wider uppercase text-[#2B2B2B] hover:bg-[#EDEBE5] transition-colors"
+                    className="block px-4 py-2 text-xs font-normal tracking-wider uppercase text-[#2B2B2B] border-b border-transparent hover:border-[#2B2B2B] transition-colors"
                   >
                     {spec}
                   </Link>
@@ -126,7 +126,7 @@ export function NavbarClone() {
                   <Link
                     key={method}
                     href="/clone"
-                    className="block px-4 py-2 text-xs font-normal tracking-wider uppercase text-[#2B2B2B] hover:bg-[#EDEBE5] transition-colors"
+                    className="block px-4 py-2 text-xs font-normal tracking-wider uppercase text-[#2B2B2B] border-b border-transparent hover:border-[#2B2B2B] transition-colors"
                   >
                     {method}
                   </Link>
@@ -142,7 +142,7 @@ export function NavbarClone() {
           {/* Contact Button */}
           <Link
             href="/clone#contact"
-            className="border border-[#2B2B2B] px-5 py-2 uppercase text-[11px] tracking-[0.14em] font-normal text-[#2B2B2B] hover:bg-[#2B2B2B] hover:text-white transition-colors duration-200"
+            className="sqs-btn-secondary !py-2 !px-5 !text-[11px]"
           >
             Contact
           </Link>

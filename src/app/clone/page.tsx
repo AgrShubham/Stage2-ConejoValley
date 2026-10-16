@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function ClonePage() {
   return (
-    <main className="min-h-screen bg-[#F7F6F2] text-[#2B2B2B] font-mulish antialiased">
+    <main className="clone-page min-h-screen bg-[#F7F6F2] text-[#2B2B2B] antialiased">
       <NavbarClone />
       <HeroClone />
       <IntroClone />

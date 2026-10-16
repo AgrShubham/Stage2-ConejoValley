@@ -7,38 +7,28 @@ export function HowWeWorkClone() {
 
   return (
     <section className="bg-[#F7F6F2] py-20 lg:py-28">
-      <div className="mx-auto max-w-[1500px] px-6 md:px-10 lg:px-12">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-16">
-          {/* Left Column: Sharp Rectangular Image */}
-          <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
-            <div className="relative aspect-[3/4] w-full max-w-md lg:max-w-none overflow-hidden">
-              <Image
-                src={howWeWork.image}
-                alt="Woman and child dancing on sandy beach at sunset"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover object-center"
-              />
-            </div>
-          </div>
-
-          {/* Right Column: Content */}
-          <div className="lg:col-span-7 order-1 lg:order-2">
-            <p className="text-[11px] sm:text-xs font-normal tracking-[0.14em] uppercase text-[#2B2B2B] mb-4">
+      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-26 items-start gap-y-12">
+          {/* Left Text Container (Columns 3 to 19 on desktop) */}
+          <div className="lg:col-start-3 lg:col-span-17 flex flex-col justify-start pr-0 lg:pr-8">
+            <p className="clone-eyebrow mb-4">
               {howWeWork.tagline}
             </p>
 
-            <h2 className="font-beaufort text-3xl sm:text-4xl lg:text-[44px] font-light leading-tight text-[#2B2B2B]">
+            <h2 className="font-beaufort text-3xl sm:text-4xl lg:text-[44px] font-light leading-tight text-[#2B2B2B] mb-8 max-w-2xl">
               {howWeWork.heading}
             </h2>
 
-            <p className="mt-5 font-beaufort italic text-lg sm:text-xl font-light text-[#2B2B2B] leading-relaxed">
-              {howWeWork.lead}
-            </p>
-
-            <div className="mt-5 space-y-4 text-sm sm:text-base text-[#2B2B2B] font-light leading-relaxed">
-              <p>{howWeWork.body1}</p>
-              <p>{howWeWork.body2}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[#2B2B2B] font-muli text-sm sm:text-[15px] font-light leading-[1.8]">
+              <div>
+                <p className="clone-lead-caps">
+                  {howWeWork.lead}
+                </p>
+                <p>{howWeWork.body1}</p>
+              </div>
+              <div className="pt-0 md:pt-1">
+                <p>{howWeWork.body2}</p>
+              </div>
             </div>
 
             <div className="mt-8">
@@ -48,6 +38,19 @@ export function HowWeWorkClone() {
               >
                 {howWeWork.ctaText}
               </Link>
+            </div>
+          </div>
+
+          {/* Right Image (Columns 21 to 26 on desktop, row 4..22) */}
+          <div className="lg:col-start-21 lg:col-span-6 flex justify-center lg:justify-end">
+            <div className="relative aspect-[3/4] w-full max-w-md lg:max-w-none overflow-hidden">
+              <Image
+                src={howWeWork.image}
+                alt="Woman and child dancing on sandy beach at sunset"
+                fill
+                sizes="(max-width: 1024px) 100vw, 30vw"
+                className="object-cover object-center"
+              />
             </div>
           </div>
         </div>

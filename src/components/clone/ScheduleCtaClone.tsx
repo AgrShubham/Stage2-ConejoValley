@@ -7,58 +7,64 @@ export function ScheduleCtaClone() {
 
   return (
     <section id="schedule" className="bg-[#F7F6F2] py-20 lg:py-28 overflow-hidden">
-      <div className="mx-auto max-w-[1500px] px-6 md:px-10 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          {/* Left Visual: Seashells 1 - sharp rectangular */}
-          <div className="hidden lg:block lg:col-span-3">
+      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-26 gap-y-12 items-center">
+          {/* Left Visual: Seashells 1 (Cols 1..4 on desktop) */}
+          <div className="hidden lg:block lg:col-span-4">
             <div className="relative aspect-[3/4] w-full overflow-hidden">
               <Image
                 src={bookingCta.imageLeft}
                 alt="Person picking up seashells on a sandy beach"
                 fill
-                sizes="25vw"
+                sizes="20vw"
                 className="object-cover object-center"
               />
             </div>
           </div>
 
-          {/* Center Column: Text & Booking Action */}
-          <div className="lg:col-span-6 text-left lg:text-center px-0 lg:px-6">
-            <p className="text-[11px] sm:text-xs font-normal tracking-[0.14em] uppercase text-[#2B2B2B] mb-4">
+          {/* Spacer Column 5 */}
+          <div className="hidden lg:block lg:col-span-1" />
+
+          {/* Center Column: Text & Booking Action (Cols 6..16 on desktop) */}
+          <div className="lg:col-span-11 text-left pr-0 lg:pr-6">
+            <p className="clone-eyebrow mb-4">
               {bookingCta.tagline}
             </p>
 
-            <h2 className="font-beaufort text-3xl sm:text-4xl lg:text-[46px] font-light leading-tight text-[#2B2B2B]">
+            <h2 className="font-beaufort text-3xl sm:text-4xl lg:text-[44px] font-light leading-tight text-[#2B2B2B] mb-6">
               {bookingCta.headingPart1}{" "}
-              <span className="font-script text-[#88B1B1] text-[1.35em] inline-block font-normal ml-1">
+              <span className="script-word ml-1">
                 {bookingCta.scriptWord}
               </span>
               {bookingCta.headingPart2}
             </h2>
 
-            <div className="mt-6 space-y-4 text-sm sm:text-base text-[#2B2B2B] font-light leading-relaxed max-w-xl mx-auto">
+            <div className="space-y-4 font-muli text-sm sm:text-[15px] text-[#2B2B2B] font-light leading-[1.8] max-w-xl">
               <p>{bookingCta.body1}</p>
-              <p className="text-[#2B2B2B] font-light">{bookingCta.body2}</p>
+              <p>{bookingCta.body2}</p>
             </div>
 
             <div className="mt-8">
               <Link
                 href="/clone#contact"
-                className="sqs-btn-underline"
+                className="sqs-btn-secondary"
               >
                 {bookingCta.ctaText}
               </Link>
             </div>
           </div>
 
-          {/* Right Visual: Seashells 2 - sharp rectangular */}
-          <div className="lg:col-span-3 flex justify-center">
-            <div className="relative aspect-[3/4] w-full max-w-xs lg:max-w-none overflow-hidden">
+          {/* Spacer Column 17 */}
+          <div className="hidden lg:block lg:col-span-1" />
+
+          {/* Right Visual: Seashells 2 (Cols 18..26 on desktop) */}
+          <div className="lg:col-span-9 flex justify-center lg:justify-end">
+            <div className="relative aspect-[3/4] w-full max-w-sm lg:max-w-none overflow-hidden">
               <Image
                 src={bookingCta.imageRight}
                 alt="Person in striped dress pointing at shells on beach with child"
                 fill
-                sizes="(max-width: 1024px) 100vw, 25vw"
+                sizes="(max-width: 1024px) 100vw, 35vw"
                 className="object-cover object-center"
               />
             </div>

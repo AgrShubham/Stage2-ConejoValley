@@ -9,10 +9,10 @@ export function FooterClone() {
     <>
       {/* Pre-footer Section (Theme White) */}
       <section className="bg-white border-t border-[#E8E7E3] pt-16 pb-20 text-[#2B2B2B]">
-        <div className="mx-auto max-w-[1500px] px-6 md:px-10 lg:px-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
-            {/* Column 1: Logo & Intro */}
-            <div className="lg:col-span-4">
+        <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-26 gap-y-10 lg:gap-y-0 gap-x-6 items-start">
+            {/* Column 1 (Cols 2..10): Logo & Intro */}
+            <div className="lg:col-start-2 lg:col-span-9 pr-0 lg:pr-8">
               <Link href="/clone" className="inline-block mb-6">
                 <Image
                   src="/images/clone/logo.png"
@@ -22,17 +22,17 @@ export function FooterClone() {
                   className="h-10 w-auto object-contain md:h-11"
                 />
               </Link>
-              <p className="text-sm text-[#2B2B2B] font-light leading-relaxed max-w-sm">
+              <p className="font-muli text-sm sm:text-[15px] text-[#2B2B2B] font-light leading-[1.8] max-w-sm">
                 {footer.intro}
               </p>
             </div>
 
-            {/* Column 2: Navigate */}
-            <div className="lg:col-span-2">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-[#2B2B2B] mb-5">
+            {/* Column 2 (Cols 12..15): Navigate */}
+            <div className="lg:col-start-12 lg:col-span-4">
+              <p className="clone-lead-caps mb-4">
                 Navigate
-              </h4>
-              <ul className="space-y-3 text-sm text-[#2B2B2B] font-light">
+              </p>
+              <ul className="space-y-3 font-muli text-sm text-[#2B2B2B] font-light">
                 {footer.navLinks.map((link) => (
                   <li key={link.label}>
                     <Link href={link.href} className="hover:text-[#88B1B1] transition-colors">
@@ -43,29 +43,12 @@ export function FooterClone() {
               </ul>
             </div>
 
-            {/* Column 3: Contact */}
-            <div className="lg:col-span-3">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-[#2B2B2B] mb-5">
-                Contact
-              </h4>
-              <div className="text-sm text-[#2B2B2B] font-light space-y-2 leading-relaxed">
-                {footer.addressLines.map((line) => (
-                  <p key={line}>{line}</p>
-                ))}
-                <p className="pt-2 text-[#2B2B2B]">{footer.email}</p>
-                <p>{footer.phone}</p>
-                <p className="pt-2 text-xs text-[#666A65] leading-normal">
-                  {footer.serviceAreas}
-                </p>
-              </div>
-            </div>
-
-            {/* Column 4: Our Team */}
-            <div className="lg:col-span-3">
-              <h4 className="text-xs font-semibold uppercase tracking-[0.14em] text-[#2B2B2B] mb-5">
+            {/* Column 3 (Cols 16..20): Our Team */}
+            <div className="lg:col-start-16 lg:col-span-5">
+              <p className="clone-lead-caps mb-4">
                 Our Team
-              </h4>
-              <ul className="space-y-2 text-xs text-[#2B2B2B] font-light">
+              </p>
+              <ul className="space-y-2.5 font-muli text-[13px] text-[#2B2B2B] font-light leading-normal">
                 {footer.teamMembers.map((member) => (
                   <li key={member}>
                     <Link href="/clone" className="hover:text-[#88B1B1] transition-colors">
@@ -74,6 +57,31 @@ export function FooterClone() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* Column 4 (Cols 21..26): Contact */}
+            <div className="lg:col-start-21 lg:col-span-6 pl-0 lg:pl-2">
+              <p className="clone-lead-caps mb-4">
+                Contact
+              </p>
+              <div className="font-muli text-sm text-[#2B2B2B] font-light space-y-2 leading-relaxed">
+                {footer.addressLines.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
+                <p className="pt-2">
+                  <a href={`mailto:${footer.email}`} className="text-[#2B2B2B] hover:text-[#88B1B1] transition-colors">
+                    {footer.email}
+                  </a>
+                </p>
+                <p>
+                  <a href={`tel:${footer.phone.replace(/[^0-9]/g, '')}`} className="text-[#2B2B2B] hover:text-[#88B1B1] transition-colors">
+                    {footer.phone}
+                  </a>
+                </p>
+                <p className="pt-2 text-xs italic text-[#666A65] leading-normal">
+                  {footer.serviceAreas}
+                </p>
+              </div>
             </div>
           </div>
         </div>
