@@ -7,17 +7,31 @@ export function HowWeWorkClone() {
 
   return (
     <section className="bg-[#F7F6F2] py-20 lg:py-28">
-      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-26 items-start gap-y-12">
+      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-26 items-start gap-y-12">
           {/* Left Text Container (Columns 3 to 19 on desktop) */}
-          <div className="lg:col-start-3 lg:col-span-17 flex flex-col justify-start pr-0 lg:pr-8">
+          <div className="md:col-start-3 md:col-span-17 flex flex-col justify-start pr-0 md:pr-8">
             <p className="clone-eyebrow mb-4">
               {howWeWork.tagline}
             </p>
 
-            <h2 className="font-beaufort text-3xl sm:text-4xl lg:text-[44px] font-light leading-tight text-[#2B2B2B] mb-8 max-w-2xl">
+            <h2 className="font-beaufort text-3xl sm:text-4xl md:text-[44px] font-light leading-tight text-[#2B2B2B] mb-8 max-w-2xl">
               {howWeWork.heading}
             </h2>
+
+            {/* Mobile-Only Image (Appears directly between H2 and body text on mobile < 768px, matching Squarespace mobile layout) */}
+            <div className="block md:hidden mb-8">
+              <div className="relative aspect-[3/4] w-full overflow-hidden">
+                <Image
+                  src={howWeWork.image}
+                  alt="Woman and child dancing on sandy beach at sunset"
+                  fill
+                  sizes="100vw"
+                  priority
+                  className="object-cover object-center"
+                />
+              </div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[#2B2B2B] font-muli text-sm sm:text-[15px] font-light leading-[1.8]">
               <div>
@@ -41,14 +55,15 @@ export function HowWeWorkClone() {
             </div>
           </div>
 
-          {/* Right Image (Columns 21 to 26 on desktop, row 4..22) */}
-          <div className="lg:col-start-21 lg:col-span-6 flex justify-center lg:justify-end">
-            <div className="relative aspect-[3/4] w-full max-w-md lg:max-w-none overflow-hidden">
+          {/* Right Image on Desktop/Tablet (Columns 21 to 26 on desktop, row 4..22) */}
+          <div className="hidden md:flex md:col-start-21 md:col-span-6 justify-end">
+            <div className="relative aspect-[3/4] w-full max-w-md md:max-w-none overflow-hidden">
               <Image
                 src={howWeWork.image}
                 alt="Woman and child dancing on sandy beach at sunset"
                 fill
-                sizes="(max-width: 1024px) 100vw, 30vw"
+                sizes="(max-width: 768px) 100vw, 30vw"
+                priority
                 className="object-cover object-center"
               />
             </div>

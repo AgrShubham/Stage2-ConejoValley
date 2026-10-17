@@ -8,11 +8,11 @@ export function SpecialtiesGridClone() {
 
   return (
     <section className="bg-white py-20 lg:py-28 border-b border-[#E8E7E3]">
-      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-26 gap-y-12 items-start">
+      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-26 gap-y-12 items-start">
           {/* Column 1 (Cols 3..10): Heading */}
-          <div className="lg:col-start-3 lg:col-span-8 pr-0 lg:pr-8">
-            <h3 className="font-beaufort text-3xl sm:text-4xl lg:text-[42px] font-light text-[#2B2B2B] leading-tight sticky top-28">
+          <div className="md:col-start-3 md:col-span-8 pr-0 md:pr-8">
+            <h3 className="font-beaufort text-2xl sm:text-3xl md:text-[28px] lg:text-[40px] font-light text-[#2B2B2B] leading-tight sticky top-28">
               {specialties.heading}{" "}
               <span className="script-word ml-1">
                 {specialties.scriptWord}
@@ -22,7 +22,7 @@ export function SpecialtiesGridClone() {
           </div>
 
           {/* Column 2 (Cols 11..18): Trauma & Dissociation */}
-          <div className="lg:col-start-11 lg:col-span-8 space-y-12 pr-0 lg:pr-4">
+          <div className="md:col-start-11 md:col-span-8 space-y-12 pr-0 md:pr-4">
             {/* Trauma */}
             {trauma && (
               <div>
@@ -59,7 +59,7 @@ export function SpecialtiesGridClone() {
           </div>
 
           {/* Column 3 (Cols 19..26): EMDR & Special Needs Parenting */}
-          <div className="lg:col-start-19 lg:col-span-8 space-y-12 pl-0 lg:pl-2">
+          <div className="md:col-start-19 md:col-span-8 space-y-12 pl-0 md:pl-2">
             {/* EMDR */}
             {emdr && (
               <div>

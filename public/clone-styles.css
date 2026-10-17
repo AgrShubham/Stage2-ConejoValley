@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'PrintedMoments';
+  src: url('/fonts/printedmoments-webfont.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'beaufort-pro';
+  src: url('/fonts/beaufort-pro-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'beaufort-pro';
+  src: url('/fonts/beaufort-pro-300-italic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Authentic Clone Page Styles */
+.clone-page {
+  font-family: 'Muli', var(--font-mulish), system-ui, sans-serif !important;
+  color: #2B2B2B !important;
+  background-color: #F7F6F2;
+}
+
+.clone-page h1,
+.clone-page h2,
+.clone-page h3,
+.clone-page h4 {
+  font-family: "beaufort-pro", serif !important;
+  font-weight: 300 !important;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  color: #2B2B2B;
+}
+
+.clone-page h1 em,
+.clone-page h2 em,
+.clone-page h3 em,
+.clone-page h4 em {
+  font-family: "beaufort-pro", serif !important;
+  font-weight: 300 !important;
+  font-style: italic !important;
+}
+
+.clone-page .quote-banner h2,
+.clone-page .quote-banner em,
+.clone-page .text-quote-light,
+.clone-page .text-quote-light em {
+  color: #F7F6F2 !important;
+}
+
+.clone-page .script-word,
+.clone-page h1 strong em,
+.clone-page h2 strong em,
+.clone-page h3 strong em,
+.clone-page h4 strong em {
+  font-family: 'PrintedMoments', cursive, sans-serif !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  color: #88B1B1 !important;
+  font-size: 1.25em !important;
+  line-height: 0.7em !important;
+  letter-spacing: 0em !important;
+  display: inline-block !important;
+}
+
+.clone-page .clone-eyebrow {
+  font-family: 'Muli', var(--font-mulish), sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  line-height: 1.4 !important;
+  color: #2B2B2B !important;
+}
+
+.clone-page .clone-lead-caps {
+  font-family: 'Muli', var(--font-mulish), sans-serif !important;
+  font-size: 0.86rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  line-height: 1.6 !important;
+  color: #2B2B2B !important;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+/* Button & Link Styles */
+.sqs-btn-underline {
+  font-family: 'Muli', var(--font-mulish), sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+  font-size: 0.85rem !important;
+  line-height: 1.2 !important;
+  color: #2B2B2B !important;
+  display: inline-block !important;
+  padding: 0.5rem 0 !important;
+  position: relative !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  transform: perspective(1px) translateZ(0);
+}
+
+.sqs-btn-underline::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid #515151;
+  transition: right 0.5s ease;
+}
+
+.sqs-btn-underline:hover::before {
+  right: 100%;
+}
+
+.sqs-btn-secondary {
+  font-family: 'Muli', var(--font-mulish), sans-serif !important;
+  font-size: 0.82rem !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  padding: 0.85rem 1.85rem !important;
+  border: 1px solid #2B2B2B !important;
+  background-color: transparent !important;
+  color: #2B2B2B !important;
+  display: inline-block !important;
+  transition: all 0.2s ease !important;
+  text-decoration: none !important;
+  border-radius: 0 !important;
+}
+
+.sqs-btn-secondary:hover {
+  background-color: #2B2B2B !important;
+  color: #FFFFFF !important;
+}
+
+.sqs-nav-link {
+  font-family: 'Muli', var(--font-mulish), sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-size: 0.8rem !important;
+  color: #2B2B2B !important;
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  transition: color 0.2s ease !important;
+}
+
+.sqs-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: #2B2B2B;
+  transition: width 0.3s ease;
+}
+
+.sqs-nav-link:hover::after {
+  width: 100%;
+}

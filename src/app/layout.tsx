@@ -78,6 +78,7 @@ export default function RootLayout({
     >
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/fsc1wsd.css" />
+        <link rel="stylesheet" href="/clone-styles.css" />
       </head>
       <body className="min-h-screen bg-sand-50 font-sans text-ink-900 selection:bg-clay-500 selection:text-white">
         {children}

@@ -7,30 +7,34 @@ export function WhoWeHelpClone() {
 
   return (
     <section className="bg-white py-20 lg:py-28 border-t border-[#E8E7E3]">
-      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
-        {/* Section Heading */}
-        <div className="text-center mb-16">
-          <h2 className="font-beaufort text-3xl sm:text-4xl lg:text-[46px] font-light text-[#2B2B2B]">
-            {whoWeHelp.heading}{" "}
-            <span className="script-word ml-1">
-              {whoWeHelp.scriptWord}
-            </span>
-          </h2>
-        </div>
-
+      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 md:px-8">
         {/* 3-Column Grid positioned across desktop cols 5..26 */}
-        <div className="grid grid-cols-1 lg:grid-cols-26 gap-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-26 gap-y-12">
           {/* Spacer columns 1..4 on desktop */}
-          <div className="hidden lg:block lg:col-span-4" />
+          <div className="hidden md:block md:col-span-4" />
+
+          {/* Section Heading aligned with Card 1 (Cols 5..26) */}
+          <div className="md:col-span-22 mb-4">
+            <h2 className="font-beaufort text-3xl sm:text-4xl md:text-[46px] font-light text-[#2B2B2B]">
+              {whoWeHelp.heading}{" "}
+              <span className="script-word ml-1">
+                {whoWeHelp.scriptWord}
+              </span>
+            </h2>
+          </div>
+
+          {/* Spacer columns 1..4 on desktop */}
+          <div className="hidden md:block md:col-span-4" />
 
           {/* Card 1: Adults (Cols 5..11) */}
-          <div className="lg:col-span-7 flex flex-col pr-0 lg:pr-6">
+          <div className="md:col-span-7 flex flex-col pr-0 md:pr-6">
             <div className="relative aspect-[3/4] w-full overflow-hidden">
               <Image
                 src={whoWeHelp.cards[0].image}
                 alt={whoWeHelp.cards[0].title}
                 fill
                 sizes="(max-width: 768px) 100vw, 25vw"
+                priority
                 className="object-cover object-center"
               />
             </div>
@@ -45,13 +49,14 @@ export function WhoWeHelpClone() {
           </div>
 
           {/* Card 2: Couples (Cols 12..18) */}
-          <div className="lg:col-span-7 flex flex-col px-0 lg:px-3">
+          <div className="md:col-span-7 flex flex-col px-0 md:px-3">
             <div className="relative aspect-[3/4] w-full overflow-hidden">
               <Image
                 src={whoWeHelp.cards[1].image}
                 alt={whoWeHelp.cards[1].title}
                 fill
                 sizes="(max-width: 768px) 100vw, 25vw"
+                priority
                 className="object-cover object-center"
               />
             </div>
@@ -66,13 +71,14 @@ export function WhoWeHelpClone() {
           </div>
 
           {/* Card 3: Children & Teens (Cols 19..26) */}
-          <div className="lg:col-span-8 flex flex-col pl-0 lg:pl-6">
+          <div className="md:col-span-8 flex flex-col pl-0 md:pl-6">
             <div className="relative aspect-[3/4] w-full overflow-hidden">
               <Image
                 src={whoWeHelp.cards[2].image}
                 alt={whoWeHelp.cards[2].title}
                 fill
                 sizes="(max-width: 768px) 100vw, 25vw"
+                priority
                 className="object-cover object-center"
               />
             </div>

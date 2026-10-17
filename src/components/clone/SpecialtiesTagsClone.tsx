@@ -6,11 +6,11 @@ export function SpecialtiesTagsClone() {
 
   return (
     <section className="bg-white py-20 lg:py-28 border-b border-[#E8E7E3]">
-      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-26 gap-y-10 items-start">
+      <div className="mx-auto max-w-[1500px] px-4 sm:px-6 md:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-26 gap-y-10 items-start">
           {/* Left Column: Heading (Cols 3..9) */}
-          <div className="lg:col-start-3 lg:col-span-7 pr-0 lg:pr-6">
-            <h3 className="font-beaufort text-3xl sm:text-4xl lg:text-[42px] font-light text-[#2B2B2B] leading-tight sticky top-28">
+          <div className="md:col-start-3 md:col-span-7 pr-0 md:pr-6">
+            <h3 className="font-beaufort text-2xl sm:text-3xl md:text-[28px] lg:text-[40px] font-light text-[#2B2B2B] leading-tight sticky top-28">
               {expertise.heading}{" "}
               <span className="script-word ml-1">
                 {expertise.scriptWord}
@@ -19,7 +19,7 @@ export function SpecialtiesTagsClone() {
           </div>
 
           {/* Right Column: 2-Subcolumn Editorial Bordered List (Cols 10..26) */}
-          <div className="lg:col-start-10 lg:col-span-17 grid grid-cols-1 sm:grid-cols-2 gap-x-10 lg:gap-x-12">
+          <div className="md:col-start-10 md:col-span-17 grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-12">
             {/* Column A (Cols 10..18) */}
             <div>
               {expertise.columnA.map((item) => (

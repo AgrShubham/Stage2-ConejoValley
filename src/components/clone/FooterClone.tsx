@@ -9,16 +9,17 @@ export function FooterClone() {
     <>
       {/* Pre-footer Section (Theme White) */}
       <section className="bg-white border-t border-[#E8E7E3] pt-16 pb-20 text-[#2B2B2B]">
-        <div className="mx-auto max-w-[1500px] px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-26 gap-y-10 lg:gap-y-0 gap-x-6 items-start">
+        <div className="mx-auto max-w-[1500px] px-4 sm:px-6 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-26 gap-y-10 md:gap-y-0 gap-x-6 items-start">
             {/* Column 1 (Cols 2..10): Logo & Intro */}
-            <div className="lg:col-start-2 lg:col-span-9 pr-0 lg:pr-8">
+            <div className="md:col-start-2 md:col-span-9 pr-0 md:pr-8">
               <Link href="/clone" className="inline-block mb-6">
                 <Image
                   src="/images/clone/logo.png"
                   alt="Conejo Valley Family Counseling"
                   width={240}
                   height={60}
+                  priority
                   className="h-10 w-auto object-contain md:h-11"
                 />
               </Link>
@@ -28,7 +29,7 @@ export function FooterClone() {
             </div>
 
             {/* Column 2 (Cols 12..15): Navigate */}
-            <div className="lg:col-start-12 lg:col-span-4">
+            <div className="md:col-start-12 md:col-span-4">
               <p className="clone-lead-caps mb-4">
                 Navigate
               </p>
@@ -44,7 +45,7 @@ export function FooterClone() {
             </div>
 
             {/* Column 3 (Cols 16..20): Our Team */}
-            <div className="lg:col-start-16 lg:col-span-5">
+            <div className="md:col-start-16 md:col-span-5">
               <p className="clone-lead-caps mb-4">
                 Our Team
               </p>
@@ -60,7 +61,7 @@ export function FooterClone() {
             </div>
 
             {/* Column 4 (Cols 21..26): Contact */}
-            <div className="lg:col-start-21 lg:col-span-6 pl-0 lg:pl-2">
+            <div className="md:col-start-21 md:col-span-6 pl-0 md:pl-2">
               <p className="clone-lead-caps mb-4">
                 Contact
               </p>
@@ -89,7 +90,7 @@ export function FooterClone() {
 
       {/* Dark Footer Bar (Theme Dark #2B2B2B) */}
       <footer className="bg-[#2B2B2B] py-8 text-center text-xs text-[#A9A9A9] tracking-wider">
-        <div className="mx-auto max-w-[1500px] px-6 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+        <div className="mx-auto max-w-[1500px] px-4 flex flex-row flex-wrap items-center justify-center gap-x-2.5 gap-y-1">
           <Link href="/clone" className="text-white hover:underline">Terms</Link>
           <span className="text-[#A9A9A9]">|</span>
           <Link href="/clone" className="text-white hover:underline">Privacy Policy</Link>
