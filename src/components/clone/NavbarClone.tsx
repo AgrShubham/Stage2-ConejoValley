@@ -55,20 +55,19 @@ export function NavbarClone() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 lg:gap-10 lg:flex">
           <Link href="/clone" className="sqs-nav-link">
             About
           </Link>
 
-          {/* Our Team Dropdown */}
+          {/* Our Team Dropdown (Desktop: folderDropdownIcon: none) */}
           <div
             className="relative"
             onMouseEnter={() => setActiveDropdown("team")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="sqs-nav-link gap-1 py-2 cursor-pointer">
+            <button className="sqs-nav-link py-2 cursor-pointer">
               <span>Our Team</span>
-              <ChevronDown className="h-3 w-3 opacity-60 ml-0.5" />
             </button>
             {activeDropdown === "team" && (
               <div className="absolute top-full left-0 w-72 border border-[#E8E7E3] bg-[#F7F6F2] py-2 shadow-sm">
@@ -85,15 +84,14 @@ export function NavbarClone() {
             )}
           </div>
 
-          {/* Specialties Dropdown */}
+          {/* Specialties Dropdown (Desktop: folderDropdownIcon: none) */}
           <div
             className="relative"
             onMouseEnter={() => setActiveDropdown("specialties")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="sqs-nav-link gap-1 py-2 cursor-pointer">
+            <button className="sqs-nav-link py-2 cursor-pointer">
               <span>Specialties</span>
-              <ChevronDown className="h-3 w-3 opacity-60 ml-0.5" />
             </button>
             {activeDropdown === "specialties" && (
               <div className="absolute top-full left-0 w-64 border border-[#E8E7E3] bg-[#F7F6F2] py-2 shadow-sm">
@@ -110,15 +108,14 @@ export function NavbarClone() {
             )}
           </div>
 
-          {/* Methods Dropdown */}
+          {/* Methods Dropdown (Desktop: folderDropdownIcon: none) */}
           <div
             className="relative"
             onMouseEnter={() => setActiveDropdown("methods")}
             onMouseLeave={() => setActiveDropdown(null)}
           >
-            <button className="sqs-nav-link gap-1 py-2 cursor-pointer">
+            <button className="sqs-nav-link py-2 cursor-pointer">
               <span>Methods</span>
-              <ChevronDown className="h-3 w-3 opacity-60 ml-0.5" />
             </button>
             {activeDropdown === "methods" && (
               <div className="absolute top-full left-0 w-56 border border-[#E8E7E3] bg-[#F7F6F2] py-2 shadow-sm">
@@ -139,10 +136,10 @@ export function NavbarClone() {
             FAQs
           </Link>
 
-          {/* Contact Button */}
+          {/* Contact Button (Pill outline matching secondary-button-shape-oval) */}
           <Link
             href="/clone#contact"
-            className="sqs-btn-secondary !py-2 !px-5 !text-[11px]"
+            className="sqs-btn-secondary !py-2 !px-6 !text-[11px] !rounded-full"
           >
             Contact
           </Link>
@@ -280,7 +277,7 @@ export function NavbarClone() {
             <Link
               href="/clone#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-2 inline-block text-center border border-[#2B2B2B] py-2.5 uppercase text-xs tracking-[0.14em] font-normal text-[#2B2B2B]"
+              className="mt-2 inline-block text-center border border-[#2B2B2B] rounded-full py-2.5 uppercase text-xs tracking-[0.14em] font-normal text-[#2B2B2B]"
             >
               Contact
             </Link>

@@ -134,7 +134,7 @@
   display: inline-block !important;
   transition: all 0.2s ease !important;
   text-decoration: none !important;
-  border-radius: 0 !important;
+  border-radius: 9999px !important;
 }
 
 .sqs-btn-secondary:hover {
@@ -168,3 +168,4 @@
 .sqs-nav-link:hover::after {
   width: 100%;
 }
+
