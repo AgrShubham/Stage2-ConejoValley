@@ -62,16 +62,16 @@ This document tracks every visual, typographic, structural, and behavioral eleme
 
 Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 3500–3700).
 
-| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+| # | Element | Original Site (Image 1) | Resolution in Clone | Status |
 |---|---|---|---|---|
-| 2.1 | **Beach Photo Right Alignment & Width** | Spans columns 19 to 27 in 26-column grid (`grid-area: 1/19/17/27`), extending close to the right margin with standard site padding. | Constrained inside narrow wrapper, leaving a **massive ~25% empty cream void** to the right of the beach image. | **High** — severely alters horizontal balance and section geometry. |
-| 2.2 | **Beach Photo Vertical Position (Row 1)** | Starts at **Row 1**, extending significantly **higher than the H2 heading** (which starts at Row 4). Anchors the section with an asymmetric staggered editorial feel. | Top of image sits level with or slightly below the H2 headline. | **High** — flattens the editorial visual rhythm. |
-| 2.3 | **Beach Photo Aspect Ratio & Crop** | Wide, tall portrait showing expansive ocean surface, rolling wave crests, and sand foam. | Squarish / narrow aspect ratio (`aspect-[4/5]`) cutting off the horizontal expanse of the wave crests. | **Medium** — image appears pinched/cropped horizontally. |
-| 2.4 | **Uppercase Lead Line Wrapping** | Formatted across **2 lines** wrapping after `TO`:<br>• Line 1: `AT CONEJO VALLEY FAMILY COUNSELING WE WANT TO`<br>• Line 2: `MAKE THAT HOPE A REALITY.` | Wraps after `WE`:<br>• Line 1: `AT CONEJO VALLEY FAMILY COUNSELING WE`<br>• Line 2: `WANT TO MAKE THAT HOPE A REALITY.` | **Medium** — text block width mismatch. |
-| 2.5 | **Paragraph 1 Line Wrapping** | Formatted across **5 lines**:<br>• Line 1 ends: `...growth, looking to`<br>• Line 2 ends: `...working on your`<br>• Line 3 ends: `...for your child, we`<br>• Line 4 ends: `...space to help you` | Drops words earlier due to narrow column width:<br>• Line 1 ends: `...growth,`<br>• Line 2 ends: `...working`<br>• Line 3 ends: `...support for`<br>• Line 4 ends: `...safe space` | **Medium** — affects line cadence and spacing. |
-| 2.6 | **Paragraph 2 Line Count & Orphan** | Formatted across **7 lines** exactly:<br>• Line 7 ends with: `transformative path forward.` | Wraps across **8 lines** with an orphaned 2-word Line 8:<br>• Line 8: `path forward.` | **Medium** — typographic orphan defect. |
-| 2.7 | **Text-to-Image Spacer Gap** | Fluid Engine allocates 1 spacer column (Col 18) between text (ends Col 17) and photo (starts Col 19). | Unnaturally wide gap between the text columns and the beach photo due to double max-width constraints. | **Medium** — makes the text feel stranded on the left. |
-| 2.8 | **Color & Typography Match** | `#F7F6F2` background, `#2B2B2B` charcoal body text, *Beaufort* display serif H2. | Exact color and font family match. | **Passed** — visual styling matches. |
+| 2.1 | **Beach Photo Right Alignment & Width** | Spans columns 19 to 27 in 26-column grid (`grid-area: 1/19/17/27`), extending close to the right margin with standard site padding. | Right column container expanded to `md:col-start-18 md:col-span-9 lg:col-start-19 lg:col-span-8` without `max-w-md` cap. Photo reaches right margin. | **RESOLVED** |
+| 2.2 | **Beach Photo Vertical Position (Row 1)** | Starts at **Row 1**, extending significantly **higher than the H2 heading** (which starts at Row 4). Anchors the section with an asymmetric staggered editorial feel. | Added `-mt-4 md:-mt-8 lg:-mt-12` so top of photo sits visibly above the H2 headline. | **RESOLVED** |
+| 2.3 | **Beach Photo Aspect Ratio & Crop** | Wide, tall portrait showing expansive ocean surface, rolling wave crests, and sand foam. | Adjusted aspect ratio to `aspect-[3/4] lg:aspect-[4/5]` with `object-cover`. | **RESOLVED** |
+| 2.4 | **Uppercase Lead Line Wrapping** | Formatted across **2 lines** wrapping after `TO`:<br>• Line 1: `AT CONEJO VALLEY FAMILY COUNSELING WE WANT TO`<br>• Line 2: `MAKE THAT HOPE A REALITY.` | Container widened without `pr-8` squeeze; lead text wraps cleanly after `TO`. | **RESOLVED** |
+| 2.5 | **Paragraph 1 Line Wrapping** | Formatted across **5 lines**:<br>• Line 1 ends: `...growth, looking to`<br>• Line 2 ends: `...working on your`<br>• Line 3 ends: `...for your child, we`<br>• Line 4 ends: `...space to help you` | Full column allocation restores natural 5-line cadence. | **RESOLVED** |
+| 2.6 | **Paragraph 2 Line Count & Orphan** | Formatted across **7 lines** exactly:<br>• Line 7 ends with: `transformative path forward.` | Natural 7-line wrap achieved, completely eliminating orphaned 8th line. | **RESOLVED** |
+| 2.7 | **Text-to-Image Spacer Gap** | Fluid Engine allocates 1 spacer column (Col 18) between text (ends Col 17) and photo (starts Col 19). | 1-column spacer restored between text columns and photo. | **RESOLVED** |
+| 2.8 | **Color & Typography Match** | `#F7F6F2` background, `#2B2B2B` charcoal body text, *Beaufort* display serif H2. | Exact color and font family match. | **PASSED** |
 
 ---
 
@@ -79,14 +79,14 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 
 Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 4250–4580).
 
-| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+| # | Element | Original Site (Image 1) | Resolution in Clone | Status |
 |---|---|---|---|---|
-| 3.1 | **Heading "Who we *help*" Placement** | Starts at **Column 2** (`grid-area: 1/2/3/10`), hanging **3 full columns to the left of Card 1** (which starts at Col 5). Creates a distinct asymmetric overhang. | Heading is pushed inward to start at **Column 5**, sitting flush above Card 1. Misses the signature left-overhang. | **High** — alters section alignment and hierarchy. |
-| 3.2 | **Card Image Aspect Ratio** | Squarish aspect ratio (**1:1 / square**), spanning 11 rows by 7 columns in Fluid Engine (`grid-area: 4/5/15/12`). | Taller portrait aspect ratio (**3:4** / `aspect-[3/4]`), elongating the cards and reducing horizontal width. | **Medium** — alters card proportions and vertical scale. |
-| 3.3 | **Card Grid Right Margin & Spread** | Card 3 (*Children & Teens*) spans columns 19 to 26 (`grid-area: 4/19/15/26`), stretching across the viewport to standard right margin. | Cards constrained in narrower container, leaving **excess dead space to the right of Card 3**. | **High** — compresses the 3 cards horizontally. |
-| 3.4 | **Card Body Text Line Count** | All 3 cards format into **exactly 4 lines** of body text with clean line wrapping:<br>• Adults: 4 lines<br>• Couples: 4 lines<br>• Children & Teens: 4 lines | Narrower column widths cause premature line drops:<br>• Adults: 4 lines (stricter wrapping)<br>• Couples: **5 lines** (wraps onto line 5)<br>• Children & Teens: **5 lines** | **Medium** — disrupts bottom alignment across the 3 cards. |
-| 3.5 | **Card Corner Radius** | Sharp rectangular edges (`border-radius: 0`). | Sharp rectangular edges (`rounded-none`). | **Passed** — geometry matches. |
-| 3.6 | **Typography & Colors** | *Beaufort* display serif headings, *Muli* body copy, brand teal script (*help*). | Exact font families and colors match. | **Passed** — styling matches. |
+| 3.1 | **Heading "Who we *help*" Placement** | Starts at **Column 2** (`grid-area: 1/2/3/10`), hanging **3 full columns to the left of Card 1** (which starts at Col 5). Creates a distinct asymmetric overhang. | Heading container updated to start at **Column 2** (`hidden md:block md:col-span-1` spacer), restoring the 3-column left-overhang past Card 1. | **RESOLVED** |
+| 3.2 | **Card Image Aspect Ratio** | Squarish aspect ratio (**1:1 / square**), spanning 11 rows by 7 columns in Fluid Engine (`grid-area: 4/5/15/12`). | Switched all 3 card image containers to `aspect-square` (`aspect-[1/1]`). | **RESOLVED** |
+| 3.3 | **Card Grid Right Margin & Spread** | Card 3 (*Children & Teens*) spans columns 19 to 26 (`grid-area: 4/19/15/26`), stretching across the viewport to standard right margin. | Removed restrictive padding; cards now spread naturally from Col 5 through Col 26. | **RESOLVED** |
+| 3.4 | **Card Body Text Line Count** | All 3 cards format into **exactly 4 lines** of body text with clean line wrapping:<br>• Adults: 4 lines<br>• Couples: 4 lines<br>• Children & Teens: 4 lines | Expanded column width restores clean 4-line wrapping without 5th-line overflows. | **RESOLVED** |
+| 3.5 | **Card Corner Radius** | Sharp rectangular edges (`border-radius: 0`). | Sharp rectangular edges (`rounded-none`). | **PASSED** |
+| 3.6 | **Typography & Colors** | *Beaufort* display serif headings, *Muli* body copy, brand teal script (*help*). | Exact font families and colors match. | **PASSED** |
 
 ---
 
@@ -94,13 +94,13 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 
 Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 5580–5670).
 
-| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+| # | Element | Original Site (Image 1) | Resolution in Clone | Status |
 |---|---|---|---|---|
-| 4.1 | **Text Horizontal Alignment & Placement** | **Left-aligned** (`text-left`), spanning columns 3 to 19 in lower rows (`grid-area: 5/3/11/19`). Leaves columns 20 to 26 unobstructed so the running boy is fully visible on the right. | **Centered horizontally** (`text-center`), positioned right in the middle of the banner across the children. | **High** — covers key photographic subject and misaligns section geometry. |
-| 4.2 | **Line Wrapping & Cadence** | Formatted across **3 balanced lines**:<br>• Line 1: `You deserve a place where your story is heard,`<br>• Line 2: `valued, and understood. Nothing will be too heavy`<br>• Line 3: `for us to carry together.` | Stretched across **2 long lines**:<br>• Line 1: `You deserve a place where your story is heard, valued, and`<br>• Line 2: `understood. Nothing will be too heavy for us to carry together.` | **High** — breaks the typographic rhythm and line structure. |
-| 4.3 | **Vertical Positioning (Lower-Row Alignment)** | Sits in rows 5 to 11 with `align-items: flex-end`, anchoring the quote in the lower-left area of the beach landscape. | Centered vertically across the dead center of the image. | **Medium** — flattens the natural asymmetric composition. |
-| 4.4 | **Italic Emphasis on Second Sentence** | Second sentence (*Nothing will be too heavy for us to carry together.*) is in *italic serif*. | Rendered in *italic serif*. | **Passed** — formatting matches. |
-| 4.5 | **Canvas & Background Asset** | Authentic full-bleed sandy beach photo with children running along the coastline. | Exact matching background asset loaded. | **Passed** — imagery matches. |
+| 4.1 | **Text Horizontal Alignment & Placement** | **Left-aligned** (`text-left`), spanning columns 3 to 19 in lower rows (`grid-area: 5/3/11/19`). Leaves columns 20 to 26 unobstructed so the running boy is fully visible on the right. | Updated container to `md:col-start-3 md:col-span-17 text-left`, leaving the right quadrant open for the running boy. | **RESOLVED** |
+| 4.2 | **Line Wrapping & Cadence** | Formatted across **3 balanced lines**:<br>• Line 1: `You deserve a place where your story is heard,`<br>• Line 2: `valued, and understood. Nothing will be too heavy`<br>• Line 3: `for us to carry together.` | Added responsive line breaks matching the exact 3-line cadence. | **RESOLVED** |
+| 4.3 | **Vertical Positioning (Lower-Row Alignment)** | Sits in rows 5 to 11 with `align-items: flex-end`, anchoring the quote in the lower-left area of the beach landscape. | Adjusted vertical padding (`pt-24 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-24`) to position text in the lower half. | **RESOLVED** |
+| 4.4 | **Italic Emphasis on Second Sentence** | Second sentence (*Nothing will be too heavy for us to carry together.*) is in *italic serif*. | Rendered in *italic serif*. | **PASSED** |
+| 4.5 | **Canvas & Background Asset** | Authentic full-bleed sandy beach photo with children running along the coastline. | Exact matching background asset loaded. | **PASSED** |
 
 ---
 
@@ -108,13 +108,13 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 
 Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 5900–6880).
 
-| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+| # | Element | Original Site (Image 1) | Resolution in Clone | Status |
 |---|---|---|---|---|
-| 5.1 | **Last Item Bottom Divider Line** | The 6th item in each column (`MARRIAGE` and `...AND MORE.`) has **no bottom border line**. Only the first 5 rows have dividers between items. | Renders a border below **all 6 items**, leaving an unnecessary extra line below `MARRIAGE` and `...AND MORE.`. | **Medium** — visible structural border difference. |
-| 5.2 | **Underline Divider Tone & Weight** | Very delicate, warm stone hairline divider (`#E8E7E3` / 1px), barely visible against the white background. | Slightly darker/sharper grey underline with higher contrast. | **Low** — aesthetic line tone refinement. |
-| 5.3 | **Left Heading Line Structure** | Formatted across **2 distinct lines**:<br>• Line 1: `Our areas of` (display serif)<br>• Line 2: `expertise` (teal cursive script with generous descender) | Heading renders with slightly smaller script scale and tighter vertical spacing between line 1 and line 2. | **Low** — subtle script font scale refinement. |
-| 5.4 | **Tag Typography & Tracking** | Uppercase clinical tags in clean sans-serif with open letter-spacing (`tracking-[0.14em]`). | Correct font, casing, and sizing. | **Passed** — typography matches. |
-| 5.5 | **2-Column Clinical Layout** | Exactly 6 items in Col A (Dissociation to Marriage) and 6 items in Col B (Anxiety to ...And More). | Exact 2-column distribution matches. | **Passed** — item distribution matches. |
+| 5.1 | **Last Item Bottom Divider Line** | The 6th item in each column (`MARRIAGE` and `...AND MORE.`) has **no bottom border line**. Only the first 5 rows have dividers between items. | Added `last:border-b-0` to remove the trailing bottom border on both columns. | **RESOLVED** |
+| 5.2 | **Underline Divider Tone & Weight** | Very delicate, warm stone hairline divider (`#E8E7E3` / 1px), barely visible against the white background. | Divider color set to soft `#E8E7E3`. | **RESOLVED** |
+| 5.3 | **Left Heading Line Structure** | Formatted across **2 distinct lines**:<br>• Line 1: `Our areas of` (display serif)<br>• Line 2: `expertise` (teal cursive script with generous descender) | Formatted across 2 lines with responsive line-break and scaled cursive script (`text-[1.15em]`). | **RESOLVED** |
+| 5.4 | **Tag Typography & Tracking** | Uppercase clinical tags in clean sans-serif with open letter-spacing (`tracking-[0.14em]`). | Correct font, casing, and tracking. | **PASSED** |
+| 5.5 | **2-Column Clinical Layout** | Exactly 6 items in Col A (Dissociation to Marriage) and 6 items in Col B (Anxiety to ...And More). | Exact 2-column distribution matches. | **PASSED** |
 
 ---
 
@@ -122,14 +122,14 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 
 Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 8250–8550).
 
-| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+| # | Element | Original Site (Image 1) | Resolution in Clone | Status |
 |---|---|---|---|---|
-| 6.1 | **Dancing Photo Height & Right Spread** | Spans rows 4 to 22 (18 rows tall, tall portrait) and columns 21 to 27 (`grid-area: 4/21/22/27`), reaching the right margin and extending down level with the CTA button. | Squarish / shorter container, leaving a **wide ~20% empty cream gap** to the right of the photo. | **High** — alters vertical scale and section balance. |
-| 6.2 | **Photo Top Vertical Stagger** | Starts at **Row 4**, aligning flush with the top eyebrow `HOW WE WORK`. | Sits noticeably lower than the eyebrow and H2 headline. | **Medium** — breaks top alignment plane. |
-| 6.3 | **Lead Caps Paragraph Wrapping** | Formatted across **3 lines**:<br>• Line 1 ends: `...BALANCING SO MANY`<br>• Line 2 ends: `...FOR THEM TO PUT`<br>• Line 3: `THEMSELVES FIRST.` | Formatted across **4 lines** due to narrow column width:<br>• Line 1 ends: `...BALANCING SO`<br>• Line 2 ends: `...HARD FOR THEM`<br>• Line 3 ends: `...TO PUT`<br>• Line 4: `THEMSELVES FIRST.` | **Medium** — text block cadence mismatch. |
-| 6.4 | **Paragraph 2 Line Cadence** | Formatted in **10 balanced lines**, ending cleanly with `what the future can hold for you.` | Wraps into **11 lines** due to narrower column width. | **Medium** — subtle column width compression. |
-| 6.5 | **CTA Button & Underline** | `LEARN MORE ABOUT US` text button with tight 1px hairline underline positioned in Row 21 below Paragraph 1. | Underline has slightly larger vertical gap. | **Passed** — element and link match. |
-| 6.6 | **Palette & Typography** | Warm `#F7F6F2` canvas, `#2B2B2B` charcoal text, *Beaufort* serif H2. | Exact font and color match. | **Passed** — styling matches. |
+| 6.1 | **Dancing Photo Height & Right Spread** | Spans rows 4 to 22 (18 rows tall, tall portrait) and columns 21 to 27 (`grid-area: 4/21/22/27`), reaching the right margin and extending down level with the CTA button. | Photo container changed to `md:col-start-20 md:col-span-7 lg:col-start-21 lg:col-span-6` with tall aspect ratio `aspect-[10/14] lg:aspect-[5/7]` without max-width restriction. | **RESOLVED** |
+| 6.2 | **Photo Top Vertical Stagger** | Starts at **Row 4**, aligning flush with the top eyebrow `HOW WE WORK`. | Applied negative top margin (`-mt-2 md:-mt-6 lg:-mt-10`) so top aligns flush with the eyebrow. | **RESOLVED** |
+| 6.3 | **Lead Caps Paragraph Wrapping** | Formatted across **3 lines**:<br>• Line 1 ends: `...BALANCING SO MANY`<br>• Line 2 ends: `...FOR THEM TO PUT`<br>• Line 3: `THEMSELVES FIRST.` | Removed inner container padding; lead text wraps in exact 3 lines. | **RESOLVED** |
+| 6.4 | **Paragraph 2 Line Cadence** | Formatted in **10 balanced lines**, ending cleanly with `what the future can hold for you.` | Unconstrained columns restore natural 10-line cadence. | **RESOLVED** |
+| 6.5 | **CTA Button & Underline** | `LEARN MORE ABOUT US` text button with tight 1px hairline underline positioned in Row 21 below Paragraph 1. | Underline spacing and link destination match. | **PASSED** |
+| 6.6 | **Palette & Typography** | Warm `#F7F6F2` canvas, `#2B2B2B` charcoal text, *Beaufort* serif H2. | Exact font and color match. | **PASSED** |
 
 ---
 
