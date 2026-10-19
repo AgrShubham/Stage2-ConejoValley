@@ -58,14 +58,31 @@ This document tracks every visual, typographic, structural, and behavioral eleme
 
 ---
 
-## Sections 2–11 Status Overview
-* **Section 2 (Intro / Empathy)**: 2-column text + beach photo cols 19..27. Mobile: Beach photo inserted between Paragraph 1 and 2. **[Verified]**
-* **Section 3 (Who We Help)**: 3-card grid (Adults, Couples, Children & Teens). **[Verified]**
-* **Section 4 (Quote Banner)**: Full-bleed `#2B2B2B` with high-contrast `#F7F6F2` glowing text. **[Verified]**
-* **Section 5 (Areas of Expertise)**: Sticky left heading + 2 columns of 6 clinical tags with `#E8E7E3` underlines. **[Verified]**
-* **Section 6 (How We Work)**: Bio copy + dancing photo cols 21..27. Mobile: photo below H2. **[Verified]**
-* **Section 7 (Honoring Family)**: Left full-bleed family photo + right quote with script `&`. **[Verified]**
-* **Section 8 (Specialties 2x2 Grid)**: Trauma, Dissociation, EMDR, Special Needs Parenting. **[Verified]**
-* **Section 9 (Schedule CTA)**: Seashells framing centered booking card. **[Verified]**
-* **Section 10 (Pre-Footer)**: Logo, intro, 4 nav links, 9 clinicians directory, address/phone. **[Verified]**
-* **Section 11 (Copyright Bar)**: Dark `#2B2B2B` with inline wrapping links. **[Verified]**
+## Section 2: Intro / Empathy Block (*"You're holding onto hope..."*)
+
+Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 3500–3700).
+
+| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+|---|---|---|---|---|
+| 2.1 | **Beach Photo Right Alignment & Width** | Spans columns 19 to 27 in 26-column grid (`grid-area: 1/19/17/27`), extending close to the right margin with standard site padding. | Constrained inside narrow wrapper, leaving a **massive ~25% empty cream void** to the right of the beach image. | **High** — severely alters horizontal balance and section geometry. |
+| 2.2 | **Beach Photo Vertical Position (Row 1)** | Starts at **Row 1**, extending significantly **higher than the H2 heading** (which starts at Row 4). Anchors the section with an asymmetric staggered editorial feel. | Top of image sits level with or slightly below the H2 headline. | **High** — flattens the editorial visual rhythm. |
+| 2.3 | **Beach Photo Aspect Ratio & Crop** | Wide, tall portrait showing expansive ocean surface, rolling wave crests, and sand foam. | Squarish / narrow aspect ratio (`aspect-[4/5]`) cutting off the horizontal expanse of the wave crests. | **Medium** — image appears pinched/cropped horizontally. |
+| 2.4 | **Uppercase Lead Line Wrapping** | Formatted across **2 lines** wrapping after `TO`:<br>• Line 1: `AT CONEJO VALLEY FAMILY COUNSELING WE WANT TO`<br>• Line 2: `MAKE THAT HOPE A REALITY.` | Wraps after `WE`:<br>• Line 1: `AT CONEJO VALLEY FAMILY COUNSELING WE`<br>• Line 2: `WANT TO MAKE THAT HOPE A REALITY.` | **Medium** — text block width mismatch. |
+| 2.5 | **Paragraph 1 Line Wrapping** | Formatted across **5 lines**:<br>• Line 1 ends: `...growth, looking to`<br>• Line 2 ends: `...working on your`<br>• Line 3 ends: `...for your child, we`<br>• Line 4 ends: `...space to help you` | Drops words earlier due to narrow column width:<br>• Line 1 ends: `...growth,`<br>• Line 2 ends: `...working`<br>• Line 3 ends: `...support for`<br>• Line 4 ends: `...safe space` | **Medium** — affects line cadence and spacing. |
+| 2.6 | **Paragraph 2 Line Count & Orphan** | Formatted across **7 lines** exactly:<br>• Line 7 ends with: `transformative path forward.` | Wraps across **8 lines** with an orphaned 2-word Line 8:<br>• Line 8: `path forward.` | **Medium** — typographic orphan defect. |
+| 2.7 | **Text-to-Image Spacer Gap** | Fluid Engine allocates 1 spacer column (Col 18) between text (ends Col 17) and photo (starts Col 19). | Unnaturally wide gap between the text columns and the beach photo due to double max-width constraints. | **Medium** — makes the text feel stranded on the left. |
+| 2.8 | **Color & Typography Match** | `#F7F6F2` background, `#2B2B2B` charcoal body text, *Beaufort* display serif H2. | Exact color and font family match. | **Passed** — visual styling matches. |
+
+---
+
+## Sections 3–11 Status Overview (Awaiting Next Screenshots)
+* [ ] **Section 3 (Who We Help)**: 3-card grid (Adults, Couples, Children & Teens).
+* [ ] **Section 4 (Quote Banner)**: Full-bleed `#2B2B2B` with high-contrast `#F7F6F2` glowing text.
+* [ ] **Section 5 (Areas of Expertise)**: Sticky left heading + 2 columns of 6 clinical tags with `#E8E7E3` underlines.
+* [ ] **Section 6 (How We Work)**: Bio copy + dancing photo cols 21..27. Mobile: photo below H2.
+* [ ] **Section 7 (Honoring Family)**: Left full-bleed family photo + right quote with script `&`.
+* [ ] **Section 8 (Specialties 2x2 Grid)**: Trauma, Dissociation, EMDR, Special Needs Parenting.
+* [ ] **Section 9 (Schedule CTA)**: Seashells framing centered booking card.
+* [ ] **Section 10 (Pre-Footer)**: Logo, intro, 4 nav links, 9 clinicians directory, address/phone.
+* [ ] **Section 11 (Copyright Bar)**: Dark `#2B2B2B` with inline wrapping links.
+
