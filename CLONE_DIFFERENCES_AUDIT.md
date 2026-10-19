@@ -90,8 +90,21 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 
 ---
 
-## Sections 4–11 Status Overview (Awaiting Next Screenshots)
-* [ ] **Section 4 (Quote Banner)**: Full-bleed `#2B2B2B` with high-contrast `#F7F6F2` glowing text.
+## Section 4: Quote Banner (*"You deserve a place..."*)
+
+Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 5580–5670).
+
+| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+|---|---|---|---|---|
+| 4.1 | **Text Horizontal Alignment & Placement** | **Left-aligned** (`text-left`), spanning columns 3 to 19 in lower rows (`grid-area: 5/3/11/19`). Leaves columns 20 to 26 unobstructed so the running boy is fully visible on the right. | **Centered horizontally** (`text-center`), positioned right in the middle of the banner across the children. | **High** — covers key photographic subject and misaligns section geometry. |
+| 4.2 | **Line Wrapping & Cadence** | Formatted across **3 balanced lines**:<br>• Line 1: `You deserve a place where your story is heard,`<br>• Line 2: `valued, and understood. Nothing will be too heavy`<br>• Line 3: `for us to carry together.` | Stretched across **2 long lines**:<br>• Line 1: `You deserve a place where your story is heard, valued, and`<br>• Line 2: `understood. Nothing will be too heavy for us to carry together.` | **High** — breaks the typographic rhythm and line structure. |
+| 4.3 | **Vertical Positioning (Lower-Row Alignment)** | Sits in rows 5 to 11 with `align-items: flex-end`, anchoring the quote in the lower-left area of the beach landscape. | Centered vertically across the dead center of the image. | **Medium** — flattens the natural asymmetric composition. |
+| 4.4 | **Italic Emphasis on Second Sentence** | Second sentence (*Nothing will be too heavy for us to carry together.*) is in *italic serif*. | Rendered in *italic serif*. | **Passed** — formatting matches. |
+| 4.5 | **Canvas & Background Asset** | Authentic full-bleed sandy beach photo with children running along the coastline. | Exact matching background asset loaded. | **Passed** — imagery matches. |
+
+---
+
+## Sections 5–11 Status Overview (Awaiting Next Screenshots)
 * [ ] **Section 5 (Areas of Expertise)**: Sticky left heading + 2 columns of 6 clinical tags with `#E8E7E3` underlines.
 * [ ] **Section 6 (How We Work)**: Bio copy + dancing photo cols 21..27. Mobile: photo below H2.
 * [ ] **Section 7 (Honoring Family)**: Left full-bleed family photo + right quote with script `&`.
@@ -99,5 +112,6 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 * [ ] **Section 9 (Schedule CTA)**: Seashells framing centered booking card.
 * [ ] **Section 10 (Pre-Footer)**: Logo, intro, 4 nav links, 9 clinicians directory, address/phone.
 * [ ] **Section 11 (Copyright Bar)**: Dark `#2B2B2B` with inline wrapping links.
+
 
 
