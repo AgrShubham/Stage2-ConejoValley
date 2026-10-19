@@ -9,12 +9,10 @@ export function WhoWeHelpClone() {
     <section className="bg-white py-20 lg:py-28 border-t border-[#E8E7E3]">
       <div className="mx-auto max-w-[1500px] px-4 sm:px-6 md:px-8">
         {/* 3-Column Grid positioned across desktop cols 5..26 */}
-        <div className="grid grid-cols-1 md:grid-cols-26 gap-y-12">
-          {/* Spacer columns 1..4 on desktop */}
-          <div className="hidden md:block md:col-span-4" />
-
-          {/* Section Heading aligned with Card 1 (Cols 5..26) */}
-          <div className="md:col-span-22 mb-4">
+        <div className="grid grid-cols-1 md:grid-cols-26 gap-y-10">
+          {/* Section Heading starts at Column 2 (Rows 1..3, Cols 2..10 in Squarespace) */}
+          <div className="hidden md:block md:col-span-1" />
+          <div className="md:col-span-18 mb-6">
             <h2 className="font-beaufort text-3xl sm:text-4xl md:text-[46px] font-light text-[#2B2B2B]">
               {whoWeHelp.heading}{" "}
               <span className="script-word ml-1">
@@ -22,13 +20,14 @@ export function WhoWeHelpClone() {
               </span>
             </h2>
           </div>
+          <div className="hidden md:block md:col-span-7" />
 
-          {/* Spacer columns 1..4 on desktop */}
+          {/* Spacer columns 1..4 on desktop so Card 1 starts at Column 5 */}
           <div className="hidden md:block md:col-span-4" />
 
           {/* Card 1: Adults (Cols 5..11) */}
-          <div className="md:col-span-7 flex flex-col pr-0 md:pr-6">
-            <div className="relative aspect-[3/4] w-full overflow-hidden">
+          <div className="md:col-span-7 flex flex-col">
+            <div className="relative aspect-square w-full overflow-hidden">
               <Image
                 src={whoWeHelp.cards[0].image}
                 alt={whoWeHelp.cards[0].title}
@@ -49,8 +48,8 @@ export function WhoWeHelpClone() {
           </div>
 
           {/* Card 2: Couples (Cols 12..18) */}
-          <div className="md:col-span-7 flex flex-col px-0 md:px-3">
-            <div className="relative aspect-[3/4] w-full overflow-hidden">
+          <div className="md:col-span-7 flex flex-col md:pl-2 md:pr-1">
+            <div className="relative aspect-square w-full overflow-hidden">
               <Image
                 src={whoWeHelp.cards[1].image}
                 alt={whoWeHelp.cards[1].title}
@@ -71,8 +70,8 @@ export function WhoWeHelpClone() {
           </div>
 
           {/* Card 3: Children & Teens (Cols 19..26) */}
-          <div className="md:col-span-8 flex flex-col pl-0 md:pl-6">
-            <div className="relative aspect-[3/4] w-full overflow-hidden">
+          <div className="md:col-span-8 flex flex-col md:pl-3">
+            <div className="relative aspect-square w-full overflow-hidden">
               <Image
                 src={whoWeHelp.cards[2].image}
                 alt={whoWeHelp.cards[2].title}

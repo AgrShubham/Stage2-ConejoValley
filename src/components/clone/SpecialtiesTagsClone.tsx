@@ -10,9 +10,9 @@ export function SpecialtiesTagsClone() {
         <div className="grid grid-cols-1 md:grid-cols-26 gap-y-10 items-start">
           {/* Left Column: Heading (Cols 3..9) */}
           <div className="md:col-start-3 md:col-span-7 pr-0 md:pr-6">
-            <h3 className="font-beaufort text-2xl sm:text-3xl md:text-[28px] lg:text-[40px] font-light text-[#2B2B2B] leading-tight sticky top-28">
-              {expertise.heading}{" "}
-              <span className="script-word ml-1">
+            <h3 className="font-beaufort text-2xl sm:text-3xl md:text-[30px] lg:text-[40px] font-light text-[#2B2B2B] leading-[1.15] sticky top-28">
+              {expertise.heading}<br className="hidden md:inline" />{" "}
+              <span className="script-word text-[1.15em] ml-0.5">
                 {expertise.scriptWord}
               </span>
             </h3>
@@ -25,7 +25,7 @@ export function SpecialtiesTagsClone() {
               {expertise.columnA.map((item) => (
                 <div
                   key={item.label}
-                  className="border-b border-[#E8E7E3] py-4 text-[13px] tracking-[0.12em] uppercase font-normal text-[#2B2B2B] transition-colors"
+                  className="border-b last:border-b-0 border-[#E8E7E3] py-4 text-[13px] tracking-[0.14em] uppercase font-normal text-[#2B2B2B] transition-colors"
                 >
                   {item.href ? (
                     <Link
@@ -46,7 +46,7 @@ export function SpecialtiesTagsClone() {
               {expertise.columnB.map((item) => (
                 <div
                   key={item.label}
-                  className="border-b border-[#E8E7E3] py-4 text-[13px] tracking-[0.12em] uppercase font-normal text-[#2B2B2B] transition-colors"
+                  className="border-b last:border-b-0 border-[#E8E7E3] py-4 text-[13px] tracking-[0.14em] uppercase font-normal text-[#2B2B2B] transition-colors"
                 >
                   {item.href ? (
                     <Link

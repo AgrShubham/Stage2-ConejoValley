@@ -5,7 +5,7 @@ export function QuoteBannerClone() {
   const { quote } = conejoValleyCloneData;
 
   return (
-    <section className="quote-banner relative overflow-hidden py-24 sm:py-28 md:py-36 text-white">
+    <section className="quote-banner relative overflow-hidden pt-24 pb-16 sm:pt-32 sm:pb-20 md:pt-40 md:pb-24 text-white">
       {/* Background Image from Original Site */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,11 +21,13 @@ export function QuoteBannerClone() {
 
       <div className="relative z-10 mx-auto max-w-[1500px] px-4 sm:px-6 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-26">
-          <div className="md:col-start-3 md:col-span-17">
-            <h2 className="text-quote-light font-beaufort text-2xl sm:text-3xl md:text-[40px] font-light leading-[1.35] text-[#F7F6F2] tracking-normal">
-              {quote.text}{" "}
+          <div className="md:col-start-3 md:col-span-17 text-left">
+            <h2 className="text-quote-light font-beaufort text-2xl sm:text-3xl md:text-[36px] lg:text-[40px] font-light leading-[1.35] text-[#F7F6F2] tracking-normal">
+              You deserve a place where your story is heard,<br className="hidden md:inline" />{" "}
+              valued, and understood.{" "}
               <em className="font-beaufort-italic text-[#F7F6F2]">
-                {quote.highlight}
+                Nothing will be too heavy<br className="hidden md:inline" />{" "}
+                for us to carry together.
               </em>
             </h2>
           </div>

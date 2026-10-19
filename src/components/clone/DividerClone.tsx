@@ -27,12 +27,13 @@ export function DividerClone() {
 
           {/* Right Column: Quote Heading (Cols 16..26) */}
           <div className="md:col-span-11 pl-0 md:pl-4">
-            <h2 className="font-beaufort text-3xl sm:text-4xl md:text-[44px] font-light leading-[1.25] text-[#2B2B2B]">
-              {divider.headingPart1}{" "}
-              <span className="script-word mx-1">
+            <h2 className="font-beaufort text-3xl sm:text-4xl md:text-[40px] lg:text-[46px] font-light leading-[1.22] text-[#2B2B2B]">
+              {divider.headingPart1}<br className="hidden md:inline" />{" "}
+              <span className="script-word text-[1.15em] mx-1">
                 {divider.scriptAmp}
               </span>{" "}
-              {divider.headingPart2}
+              helping shape<br className="hidden md:inline" />{" "}
+              where you're headed.
             </h2>
           </div>
         </div>

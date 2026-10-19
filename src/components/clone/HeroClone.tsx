@@ -35,10 +35,10 @@ export function HeroClone() {
             </p>
 
             {/* Heading - Exact 3-line wrap matching live site & lowercase script thrive. */}
-            <h1 className="font-beaufort text-3xl sm:text-4xl md:text-[48px] lg:text-[52px] font-light leading-[1.15] text-[#2B2B2B] tracking-[-0.01em]">
-              Rebuild your foundation on<br className="hidden md:inline" />{" "}
-              solid ground and finally begin<br className="hidden md:inline" />{" "}
-              to <span className="script-word">thrive.</span>
+            <h1 className="font-beaufort text-3xl sm:text-4xl md:text-[46px] lg:text-[50px] font-light leading-[1.15] text-[#2B2B2B] tracking-[-0.01em]">
+              Rebuild your foundation<br className="hidden md:inline" />{" "}
+              on solid ground and<br className="hidden md:inline" />{" "}
+              finally begin to <span className="script-word">thrive.</span>
             </h1>
 
             {/* Subtitle - max-w-2xl prevents orphaned 'grow.' */}
