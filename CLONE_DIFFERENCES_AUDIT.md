@@ -118,13 +118,28 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 
 ---
 
-## Sections 6–11 Status Overview (Awaiting Next Screenshots)
-* [ ] **Section 6 (How We Work)**: Bio copy + dancing photo cols 21..27. Mobile: photo below H2.
+## Section 6: How We Work (Bio & Dancing Photo)
+
+Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 8250–8550).
+
+| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+|---|---|---|---|---|
+| 6.1 | **Dancing Photo Height & Right Spread** | Spans rows 4 to 22 (18 rows tall, tall portrait) and columns 21 to 27 (`grid-area: 4/21/22/27`), reaching the right margin and extending down level with the CTA button. | Squarish / shorter container, leaving a **wide ~20% empty cream gap** to the right of the photo. | **High** — alters vertical scale and section balance. |
+| 6.2 | **Photo Top Vertical Stagger** | Starts at **Row 4**, aligning flush with the top eyebrow `HOW WE WORK`. | Sits noticeably lower than the eyebrow and H2 headline. | **Medium** — breaks top alignment plane. |
+| 6.3 | **Lead Caps Paragraph Wrapping** | Formatted across **3 lines**:<br>• Line 1 ends: `...BALANCING SO MANY`<br>• Line 2 ends: `...FOR THEM TO PUT`<br>• Line 3: `THEMSELVES FIRST.` | Formatted across **4 lines** due to narrow column width:<br>• Line 1 ends: `...BALANCING SO`<br>• Line 2 ends: `...HARD FOR THEM`<br>• Line 3 ends: `...TO PUT`<br>• Line 4: `THEMSELVES FIRST.` | **Medium** — text block cadence mismatch. |
+| 6.4 | **Paragraph 2 Line Cadence** | Formatted in **10 balanced lines**, ending cleanly with `what the future can hold for you.` | Wraps into **11 lines** due to narrower column width. | **Medium** — subtle column width compression. |
+| 6.5 | **CTA Button & Underline** | `LEARN MORE ABOUT US` text button with tight 1px hairline underline positioned in Row 21 below Paragraph 1. | Underline has slightly larger vertical gap. | **Passed** — element and link match. |
+| 6.6 | **Palette & Typography** | Warm `#F7F6F2` canvas, `#2B2B2B` charcoal text, *Beaufort* serif H2. | Exact font and color match. | **Passed** — styling matches. |
+
+---
+
+## Sections 7–11 Status Overview (Awaiting Next Screenshots)
 * [ ] **Section 7 (Honoring Family)**: Left full-bleed family photo + right quote with script `&`.
 * [ ] **Section 8 (Specialties 2x2 Grid)**: Trauma, Dissociation, EMDR, Special Needs Parenting.
 * [ ] **Section 9 (Schedule CTA)**: Seashells framing centered booking card.
 * [ ] **Section 10 (Pre-Footer)**: Logo, intro, 4 nav links, 9 clinicians directory, address/phone.
 * [ ] **Section 11 (Copyright Bar)**: Dark `#2B2B2B` with inline wrapping links.
+
 
 
 
