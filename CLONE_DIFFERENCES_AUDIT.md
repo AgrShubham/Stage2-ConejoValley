@@ -133,12 +133,78 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 
 ---
 
-## Sections 7–11 Status Overview (Awaiting Next Screenshots)
-* [ ] **Section 7 (Honoring Family)**: Left full-bleed family photo + right quote with script `&`.
-* [ ] **Section 8 (Specialties 2x2 Grid)**: Trauma, Dissociation, EMDR, Special Needs Parenting.
-* [ ] **Section 9 (Schedule CTA)**: Seashells framing centered booking card.
-* [ ] **Section 10 (Pre-Footer)**: Logo, intro, 4 nav links, 9 clinicians directory, address/phone.
-* [ ] **Section 11 (Copyright Bar)**: Dark `#2B2B2B` with inline wrapping links.
+## Section 7: Honoring Family (Divider Photo & Quote)
+
+Side-by-side comparison of the Original site vs. Current Clone based on the user-provided full-page screenshots and Squarespace Fluid Engine CSS (`home.html` lines 9400–9520).
+
+| # | Element | Original Site (Image 2) | Current Clone (Image 1) | Impact / Severity |
+|---|---|---|---|---|
+| 7.1 | **Left Family Beach Photo** | Full-bleed photo of family of four standing on the beach at sunset (`Jennifer+A+-+Images+(5).jpg`) spanning columns 1 to 15. | Container rendered blank/white due to lazy-loading threshold or asset path issue. | **High** — missing primary visual anchor. |
+| 7.2 | **Right Quote Typography & Ampersand** | Formatted in display serif with prominent teal script `&` (`PrintedMoments`) positioned at columns 16 to 26. | Typography matches closely, but ampersand vertical alignment needs fine-tuning with the baseline. | **Medium** — subtle typographic alignment. |
+| 7.3 | **Vertical Gutter & Padding** | Generous top and bottom section padding creating clean breathing room between Section 6 and Section 8. | Padding and canvas tone match `#FFFFFF` / clean white. | **Passed** — layout structure matches. |
+
+---
+
+## Section 8: Specialties 2x2 Grid ("Our specialties include...")
+
+Side-by-side comparison based on `home.html` (lines 9800–10400).
+
+| # | Element | Original Site (Image 2) | Current Clone (Image 1) | Impact / Severity |
+|---|---|---|---|---|
+| 8.1 | **Left Sticky Heading Hierarchy** | Displays `Our` (display serif), `specialties` (prominent cursive teal script), and `include...` (display serif). Spans columns 2 to 9. | Script font scale is slightly smaller relative to the surrounding serif text. | **Medium** — brand script emphasis. |
+| 8.2 | **2x2 Card Grid Column Alignment** | Middle column (*Trauma*, *Dissociation*) spans cols 10 to 17; right column (*EMDR*, *Special Needs Parenting*) spans cols 18 to 26. | Layout correctly mirrors the 2-column structure across desktop. | **Passed** — grid structure matches. |
+| 8.3 | **Card Text Cadence & Links** | Each card features a clean title, exactly **4 lines** of body text, and an underlined `Learn more` link with tight 1px underline. | Text wrapping has slight 1-word shifts due to column width variance. | **Medium** — line cadence polish. |
+
+---
+
+## Section 9: Schedule Appointment CTA ("Find a therapist...")
+
+Side-by-side comparison based on `home.html` (lines 10600–11100).
+
+| # | Element | Original Site (Image 2) | Current Clone (Image 1) | Impact / Severity |
+|---|---|---|---|---|
+| 9.1 | **Left Seashell Photography** | Left photo spans columns 1 to 4 (`grid-area: 2/1/15/5`), vertically centered against the text block. | Correctly positioned on the left margin. | **Passed** — asset and positioning match. |
+| 9.2 | **Right Seashell Photography** | Tall portrait photo spanning columns 18 to 27 (`grid-area: 1/18/16/27`), stretching from top row 1 down past the CTA button. | Photo present on right side, slightly narrower than full column reach. | **Low** — subtle width refinement. |
+| 9.3 | **Center Booking Card & CTA Button** | Tagline `SCHEDULE AN APPOINTMENT`, H2 with script `you.`, 2 paragraphs, and an oval pill outline button `Book now`. | Matches heading, script word, body text, and oval pill button geometry. | **Passed** — content and button shape match. |
+
+---
+
+## Section 10: Pre-Footer & Directory
+
+| # | Element | Original Site (Image 2) | Current Clone (Image 1) | Impact / Severity |
+|---|---|---|---|---|
+| 10.1 | **Logo & Practice Intro** | Display serif logo with spaced teal sub-text, followed by Newbury Park / California service intro paragraph. | Accurate typography, logo, and copy layout. | **Passed** — full fidelity. |
+| 10.2 | **Directory Columns** | 4 columns: Navigate (4 links), Our Team (9 clinician links), Service Areas (cities list), and Contact details. | Correct column structure and clinician roster. | **Passed** — complete alignment. |
+
+---
+
+## Section 11: Copyright Bar
+
+| # | Element | Original Site (Image 2) | Current Clone (Image 1) | Impact / Severity |
+|---|---|---|---|---|
+| 11.1 | **Dark Footer Bar** | Full-bleed `#2B2B2B` background with centered off-white copyright line and legal links (`Privacy Policy`, `Terms`, `Disclaimer`). | Matches color, font size, and inline responsive wrapping. | **Passed** — 100% parity. |
+
+---
+
+## Master Remediation Action Plan (Ordered by Visual Impact)
+
+```mermaid
+graph TD
+    A[1. Fix Hero H1 Line Wrapping & Column Width] --> B[2. Expand Right Photos to Bleed to Column 27 Sections 2 & 6]
+    B --> C[3. Restore Section 3 Heading Overhang Col 2 & 1:1 Square Cards]
+    C --> D[4. Left-Align Quote Banner Text Cols 3..19 Section 4]
+    D --> E[5. Remove Trailing Bottom Dividers in Section 5]
+    E --> F[6. Ensure Section 7 Left Family Photo Loads Reliably]
+```
+
+1. **Section 1 (Hero)**: Expand center text column in [`HeroClone.tsx`](file:///d:/PROJECTS/Grow%20My%20Therapy/src/components/clone/HeroClone.tsx) so H1 wraps in **3 lines** (`Rebuild your foundation` / `on solid ground and` / `finally begin to thrive.`) eliminating the 5-line orphan defect (`on`, `begin`).
+2. **Section 2 (Intro)**: In [`IntroClone.tsx`](file:///d:/PROJECTS/Grow%20My%20Therapy/src/components/clone/IntroClone.tsx), span right beach photo to column 27 (eliminate the ~25% white void) and start photo above H2 at Row 1.
+3. **Section 3 (Who We Help)**: In [`WhoWeHelpClone.tsx`](file:///d:/PROJECTS/Grow%20My%20Therapy/src/components/clone/WhoWeHelpClone.tsx), shift heading "Who we *help*" to start at **Column 2** (3 columns to the left of Card 1) and change cards to `aspect-square`.
+4. **Section 4 (Quote Banner)**: In [`QuoteBannerClone.tsx`](file:///d:/PROJECTS/Grow%20My%20Therapy/src/components/clone/QuoteBannerClone.tsx), change text from centered to **left-aligned (`text-left`)** in columns 3 to 19 across 3 lines.
+5. **Section 5 (Expertise)**: In [`SpecialtiesTagsClone.tsx`](file:///d:/PROJECTS/Grow%20My%20Therapy/src/components/clone/SpecialtiesTagsClone.tsx), add `last:border-b-0` so the bottom row (`MARRIAGE` and `...AND MORE.`) has no underline.
+6. **Section 6 (How We Work)**: In [`HowWeWorkClone.tsx`](file:///d:/PROJECTS/Grow%20My%20Therapy/src/components/clone/HowWeWorkClone.tsx), expand dancing photo to column 27 and align top with eyebrow.
+7. **Section 7 (Honoring Family)**: In [`DividerClone.tsx`](file:///d:/PROJECTS/Grow%20My%20Therapy/src/components/clone/DividerClone.tsx), ensure `priority` and correct image source for `Jennifer+A+-+Images+(5).jpg` so it never renders blank.
+
 
 
 
