@@ -104,14 +104,28 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 
 ---
 
-## Sections 5–11 Status Overview (Awaiting Next Screenshots)
-* [ ] **Section 5 (Areas of Expertise)**: Sticky left heading + 2 columns of 6 clinical tags with `#E8E7E3` underlines.
+## Section 5: Areas of Expertise (12 Tags)
+
+Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 5900–6880).
+
+| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+|---|---|---|---|---|
+| 5.1 | **Last Item Bottom Divider Line** | The 6th item in each column (`MARRIAGE` and `...AND MORE.`) has **no bottom border line**. Only the first 5 rows have dividers between items. | Renders a border below **all 6 items**, leaving an unnecessary extra line below `MARRIAGE` and `...AND MORE.`. | **Medium** — visible structural border difference. |
+| 5.2 | **Underline Divider Tone & Weight** | Very delicate, warm stone hairline divider (`#E8E7E3` / 1px), barely visible against the white background. | Slightly darker/sharper grey underline with higher contrast. | **Low** — aesthetic line tone refinement. |
+| 5.3 | **Left Heading Line Structure** | Formatted across **2 distinct lines**:<br>• Line 1: `Our areas of` (display serif)<br>• Line 2: `expertise` (teal cursive script with generous descender) | Heading renders with slightly smaller script scale and tighter vertical spacing between line 1 and line 2. | **Low** — subtle script font scale refinement. |
+| 5.4 | **Tag Typography & Tracking** | Uppercase clinical tags in clean sans-serif with open letter-spacing (`tracking-[0.14em]`). | Correct font, casing, and sizing. | **Passed** — typography matches. |
+| 5.5 | **2-Column Clinical Layout** | Exactly 6 items in Col A (Dissociation to Marriage) and 6 items in Col B (Anxiety to ...And More). | Exact 2-column distribution matches. | **Passed** — item distribution matches. |
+
+---
+
+## Sections 6–11 Status Overview (Awaiting Next Screenshots)
 * [ ] **Section 6 (How We Work)**: Bio copy + dancing photo cols 21..27. Mobile: photo below H2.
 * [ ] **Section 7 (Honoring Family)**: Left full-bleed family photo + right quote with script `&`.
 * [ ] **Section 8 (Specialties 2x2 Grid)**: Trauma, Dissociation, EMDR, Special Needs Parenting.
 * [ ] **Section 9 (Schedule CTA)**: Seashells framing centered booking card.
 * [ ] **Section 10 (Pre-Footer)**: Logo, intro, 4 nav links, 9 clinicians directory, address/phone.
 * [ ] **Section 11 (Copyright Bar)**: Dark `#2B2B2B` with inline wrapping links.
+
 
 
 
