@@ -75,8 +75,22 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 
 ---
 
-## Sections 3–11 Status Overview (Awaiting Next Screenshots)
-* [ ] **Section 3 (Who We Help)**: 3-card grid (Adults, Couples, Children & Teens).
+## Section 3: Who We Help (3-Card Grid)
+
+Side-by-side comparison of the Original site vs. Current Clone based on the user-provided screenshots and Squarespace Fluid Engine CSS (`home.html` lines 4250–4580).
+
+| # | Element | Original Site (Image 1) | Current Clone (Image 2) | Impact / Severity |
+|---|---|---|---|---|
+| 3.1 | **Heading "Who we *help*" Placement** | Starts at **Column 2** (`grid-area: 1/2/3/10`), hanging **3 full columns to the left of Card 1** (which starts at Col 5). Creates a distinct asymmetric overhang. | Heading is pushed inward to start at **Column 5**, sitting flush above Card 1. Misses the signature left-overhang. | **High** — alters section alignment and hierarchy. |
+| 3.2 | **Card Image Aspect Ratio** | Squarish aspect ratio (**1:1 / square**), spanning 11 rows by 7 columns in Fluid Engine (`grid-area: 4/5/15/12`). | Taller portrait aspect ratio (**3:4** / `aspect-[3/4]`), elongating the cards and reducing horizontal width. | **Medium** — alters card proportions and vertical scale. |
+| 3.3 | **Card Grid Right Margin & Spread** | Card 3 (*Children & Teens*) spans columns 19 to 26 (`grid-area: 4/19/15/26`), stretching across the viewport to standard right margin. | Cards constrained in narrower container, leaving **excess dead space to the right of Card 3**. | **High** — compresses the 3 cards horizontally. |
+| 3.4 | **Card Body Text Line Count** | All 3 cards format into **exactly 4 lines** of body text with clean line wrapping:<br>• Adults: 4 lines<br>• Couples: 4 lines<br>• Children & Teens: 4 lines | Narrower column widths cause premature line drops:<br>• Adults: 4 lines (stricter wrapping)<br>• Couples: **5 lines** (wraps onto line 5)<br>• Children & Teens: **5 lines** | **Medium** — disrupts bottom alignment across the 3 cards. |
+| 3.5 | **Card Corner Radius** | Sharp rectangular edges (`border-radius: 0`). | Sharp rectangular edges (`rounded-none`). | **Passed** — geometry matches. |
+| 3.6 | **Typography & Colors** | *Beaufort* display serif headings, *Muli* body copy, brand teal script (*help*). | Exact font families and colors match. | **Passed** — styling matches. |
+
+---
+
+## Sections 4–11 Status Overview (Awaiting Next Screenshots)
 * [ ] **Section 4 (Quote Banner)**: Full-bleed `#2B2B2B` with high-contrast `#F7F6F2` glowing text.
 * [ ] **Section 5 (Areas of Expertise)**: Sticky left heading + 2 columns of 6 clinical tags with `#E8E7E3` underlines.
 * [ ] **Section 6 (How We Work)**: Bio copy + dancing photo cols 21..27. Mobile: photo below H2.
@@ -85,4 +99,5 @@ Side-by-side comparison of the Original site vs. Current Clone based on the user
 * [ ] **Section 9 (Schedule CTA)**: Seashells framing centered booking card.
 * [ ] **Section 10 (Pre-Footer)**: Logo, intro, 4 nav links, 9 clinicians directory, address/phone.
 * [ ] **Section 11 (Copyright Bar)**: Dark `#2B2B2B` with inline wrapping links.
+
 
